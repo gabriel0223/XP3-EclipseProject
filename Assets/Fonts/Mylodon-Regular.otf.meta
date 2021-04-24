@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: cb08fab2bca6a7d429ff94bd599d0e59
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Mylodon
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 065e2bb74d96ecc43a0aead1fd7a90f7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,16 @@
+com variações de abafado
+
+Som de propulsão
+Som de tiro do rifle
+Som de tiro da pistola
+Som de bater com o traje em alguma parede (quanto mais variações, melhor)
+Som de vidro do capacete (2 rachando e 1 quebrando)
+Som de ativar e desativar lanterna
+Som de interagir com terminal
+Som de coletar munição
+Som de coletar bateria
+Som de porta de nave abrindo e fechando
+Som de explosão de bateria instável
+Som de navegar entre opções no inventário
+Som de selecionar opção no inventário
+Som de abrir e fechar mapa
