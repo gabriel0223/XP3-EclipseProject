@@ -5,12 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Gun", menuName = "Gun")]
 public class Gun : ScriptableObject
 {
-    [Header("STATS")]
+    [Header("STATS")] 
+    public string name;
     public GameObject projectile;
     public string shotPoint;
     public float timeBtwShots;
     public float gunKnockback;
     public Sprite gunSprite;
+    public int ammo;
+    public int ammoRemainder;
     public int maxAmmo;
     public float reloadTime;
     public float damage;
@@ -18,7 +21,11 @@ public class Gun : ScriptableObject
     public string[] shotSounds;
     public string clipOutSound, clipInSound;
     public string emptyMagazineSound;
-    
+    [Header("UI")] 
+    public Sprite flatImage;
+    public GameObject flatProjectile;
+    public float spacingBtwFlats;
+
     // Start is called before the first frame update
     void Start()
     {

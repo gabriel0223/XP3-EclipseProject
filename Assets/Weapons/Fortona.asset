@@ -10,14 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff94d8d4e1c04c24dbb240e4ccaa3a56, type: 3}
-  m_Name: Pistol
+  m_Name: Fortona
   m_EditorClassIdentifier: 
-  projectile: {fileID: 6211357333904767383, guid: 08175b14605a8674a9aab4a0fa5f2996, type: 3}
+  name: Fortona
+  projectile: {fileID: 5669747174453632526, guid: 23302f0997ce088428ea014232f9a84e, type: 3}
   shotPoint: PistolShotPoint
-  timeBtwShots: 0.4
-  gunKnockback: 4
-  gunSprite: {fileID: 21300000, guid: 67494697e2147cd42b08d7f1eb6e936b, type: 3}
-  maxAmmo: 15
+  timeBtwShots: 1
+  gunKnockback: 10
+  gunSprite: {fileID: 21300000, guid: dafef4f7b0c128e42ab26707e1073a38, type: 3}
+  ammo: 10
+  ammoRemainder: 0
+  maxAmmo: 10
   reloadTime: 0.5
   damage: 10
   shotSounds:
@@ -27,3 +30,6 @@ MonoBehaviour:
   clipOutSound: PistolClipOut
   clipInSound: PistolClipIn
   emptyMagazineSound: PistolEmpty
+  flatImage: {fileID: 0}
+  flatProjectile: {fileID: 9188784489264517639, guid: 202b2600c5451054b91b7db2e0a66639, type: 3}
+  spacingBtwFlats: -10

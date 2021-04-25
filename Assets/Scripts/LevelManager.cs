@@ -86,8 +86,8 @@ public class LevelManager : MonoBehaviour
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             
             playerRotation = player.transform.rotation;
-            ammo = gunScript.ammo;
-            ammoRemainder = gunScript.ammoRemainder;
+            // ammo = gunScript.ammo;
+            // ammoRemainder = gunScript.ammoRemainder;
         }
     }
     
@@ -129,9 +129,9 @@ public class LevelManager : MonoBehaviour
 
     void PersistAmmo()
     {
-        if (scenesLoaded == 0) return;
-        
-        gunScript.ammo = ammo;
-        gunScript.ammoRemainder = ammoRemainder;
+        // if (scenesLoaded == 0) return;
+        //
+        // gunScript.ammo = ammo;
+        // gunScript.ammoRemainder = ammoRemainder;
     }
 }

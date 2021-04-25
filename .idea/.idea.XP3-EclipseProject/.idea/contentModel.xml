@@ -1481,7 +1481,6 @@
             </e>
           </e>
         </e>
-        <e p="Gun.cs" t="Include" />
         <e p="NavMeshPlus-master" t="Include">
           <e p="NavMeshComponents" t="Include">
             <e p="Editor" t="Include">
@@ -1524,6 +1523,7 @@
           <e p="FeedbackRect.cs" t="Include" />
           <e p="FloatEM.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="Gun.cs" t="Include" />
           <e p="GunScript.cs" t="Include" />
           <e p="ImageDoc.cs" t="Include" />
           <e p="Interactive.cs" t="Include" />

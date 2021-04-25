@@ -9,10 +9,12 @@ using UnityEngine;
 
 public class GunScript : MonoBehaviour
 {
-    public Gun currentGun;
+    [SerializeField] private Gun currentGun;
+    public int gunIndex;
     public Rigidbody2D playerRb2d;
     private Transform shotPoint;
     public float smoothSpeed;
+    private float switchGunTimer;
     
     public SpriteRenderer gunSr;
     private Transform playerTransform;
@@ -21,23 +23,41 @@ public class GunScript : MonoBehaviour
     private bool flipped = false;
     [HideInInspector] public float angle;
 
-    [Header("AMMO VARIABLES")]
-    public Image[] bulletImages;
+    [Header("UI VARIABLES")] 
+    private GameObject canvas;
+    public GameObject flatBullets;
+
+    public Image weaponImage; 
     
-    public int ammo;
+    //public int ammo;
     [HideInInspector] public int ammoRemainder;
     private bool reloading;
     private Color32 darkBulletColor;
 
     public TextMeshProUGUI ammoText;
+    
+    public static List<Gun> selectedGuns = new List<Gun>();
 
     private void Awake()
     {
         playerRb2d = GetComponentInParent<Rigidbody2D>();
         playerTransform = transform.parent;
         mainCam = Camera.main;
+        canvas = GameObject.FindGameObjectWithTag("Canvas");
+
+        if (selectedGuns.Contains(currentGun))
+        {
+            currentGun = selectedGuns[gunIndex];
+        }
+        else
+        {
+            currentGun = Instantiate(currentGun);
+            selectedGuns.Add(currentGun);
+        }
+        
         gunSr.sprite = currentGun.gunSprite;
         shotPoint = transform.Find(currentGun.shotPoint);
+        UpdateUI();
     }
 
     // Start is called before the first frame update
@@ -45,8 +65,6 @@ public class GunScript : MonoBehaviour
     {
         darkBulletColor = new Color32(80,80,80,255);
         UpdateAmmo();
-        DarkenUsedAmmo();
-        LightenUnusedAmmo();
     }
 
     // Update is called once per frame
@@ -81,7 +99,7 @@ public class GunScript : MonoBehaviour
             {
                 if (Time.time >= shotTime)
                 {
-                    if (ammo > 0)
+                    if (currentGun.ammo > 0)
                     {
                         Shoot();
                     }
@@ -93,24 +111,19 @@ public class GunScript : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.R) && !reloading)
             {
-                if (ammoRemainder > 0 && ammo != currentGun.maxAmmo)
+                if (currentGun.ammoRemainder > 0 && currentGun.ammo != currentGun.maxAmmo)
                 {
                     //do reload animation
                     StartCoroutine(Reload(currentGun.reloadTime));
                 }
             }
 
-            if (Input.GetAxisRaw("Mouse ScrollWheel") > 0)
+            if (Input.GetAxisRaw("Mouse ScrollWheel") != 0)
             {
-                Debug.Log("go up in weapon selection");
+                ChangeWeapon();
             }
-            else if (Input.GetAxisRaw("Mouse ScrollWheel") < 0)
-            {
-                Debug.Log("go down in weapon selection");
-            }
-
         }
     }
     
@@ -141,7 +154,7 @@ public class GunScript : MonoBehaviour
     {
         AudioManager.instance.PlayRandomBetweenSounds(currentGun.shotSounds);
         Instantiate(currentGun.projectile, shotPoint.position, transform.rotation);
-        ammo--;
+        currentGun.ammo--;
         UpdateAmmo();
         DarkenUsedAmmo();
         AddForceAtAngle(-currentGun.gunKnockback, angle);
@@ -158,19 +171,39 @@ public class GunScript : MonoBehaviour
 
     public void UpdateAmmo()
     {
-        if (ammo > currentGun.maxAmmo)
+        if (currentGun.ammo > currentGun.maxAmmo)
         {
-            ammoRemainder += (ammo - currentGun.maxAmmo);
-            ammo = currentGun.maxAmmo;
+            currentGun.ammoRemainder += (currentGun.ammo - currentGun.maxAmmo);
+            currentGun.ammo = currentGun.maxAmmo;
         }
         
-        ammoText.SetText(ammo + " | " + ammoRemainder);
+        ammoText.SetText(currentGun.ammo + " | " + currentGun.ammoRemainder);
+        
+        DarkenUsedAmmo();
+        LightenUnusedAmmo();
+    }
+
+    public void UpdateUI()
+    {
+        weaponImage.sprite = currentGun.flatImage;
+        flatBullets.GetComponent<HorizontalLayoutGroup>().spacing = currentGun.spacingBtwFlats;
+        
+        foreach (Transform child in flatBullets.transform) {
+            Destroy(child.gameObject);
+        }
+
+        for (int i = 0; i < currentGun.maxAmmo; i++)
+        {
+            Instantiate(currentGun.flatProjectile, flatBullets.transform);
+        }
     }
 
     private void DarkenUsedAmmo()
     {
-        int count = currentGun.maxAmmo - ammo;
+        int count = currentGun.maxAmmo - currentGun.ammo;
 
+        Image[] bulletImages = flatBullets.GetComponentsInChildren<Image>();
+        
         foreach (var bullet in bulletImages)
         {
             bullet.color = Color.white;
@@ -191,12 +224,14 @@ public class GunScript : MonoBehaviour
 
     private void LightenUnusedAmmo()
     {
+        Image[] bulletImages = flatBullets.GetComponentsInChildren<Image>();
+        
         foreach (var bullet in bulletImages)
         {
             bullet.color = darkBulletColor;
         }
         
-        int count = ammo;
+        int count = currentGun.ammo;
         
         if (count == 0)
             return;
@@ -220,17 +255,52 @@ public class GunScript : MonoBehaviour
         AudioManager.instance.PlaySoundAfterAnother(currentGun.clipOutSound, currentGun.clipInSound, reloadTime);
         yield return new WaitForSeconds(currentGun.reloadTime + 0.25f);
         
-        int ammoToBeReloaed = ammoRemainder;
-        ammoRemainder -= ammoToBeReloaed;
-        ammo += ammoToBeReloaed;
+        int ammoToBeReloaed = currentGun.ammoRemainder;
+        currentGun.ammoRemainder -= ammoToBeReloaed;
+        currentGun.ammo += ammoToBeReloaed;
         UpdateAmmo();
-        LightenUnusedAmmo();
-        
+
         reloading = false;
     }
 
     public void ChangeWeapon()
     {
+        if (Time.time < switchGunTimer) return;
+
+        if (Input.GetAxisRaw("Mouse ScrollWheel") < 0)
+        {
+            if (gunIndex < GameManager.guns.Count - 1)
+                gunIndex++;
+            else
+                gunIndex = 0;
+
+            switchGunTimer = Time.time + 0.2f;
+        }
+        else if (Input.GetAxisRaw("Mouse ScrollWheel") > 0)
+        {
+            if (gunIndex > 0)
+                gunIndex--;
+            else
+                gunIndex = GameManager.guns.Count - 1;
+
+            switchGunTimer = Time.time + 0.2f;
+        }
         
+        currentGun = GameManager.guns[gunIndex];
+        gunSr.sprite = currentGun.gunSprite;
+        shotPoint = transform.Find(currentGun.shotPoint);
+
+        if (selectedGuns.Any(gun => currentGun.name.Equals(gun.name)))
+        {
+            currentGun = selectedGuns[gunIndex]; 
+            UpdateUI();
+            UpdateAmmo();
+            return;
+        }
+        
+        currentGun = Instantiate(currentGun);
+        selectedGuns.Add(currentGun);
+        UpdateUI();
+        UpdateAmmo();
     }
 }

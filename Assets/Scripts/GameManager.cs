@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     public static List<InventoryItem> currentItems = new List<InventoryItem>();
     public static Dictionary<InventoryItem, string> itemsCollected = new Dictionary<InventoryItem, string>();
     public static List<string> tutorialsLearnt = new List<string>();
+    
+    public static List<Gun> guns = new List<Gun>();
+    public Gun[] firstGuns;
 
     //public int PistolAmmo;
 
@@ -36,6 +39,9 @@ public class GameManager : MonoBehaviour
         
         DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
+
+        if (guns.Count != 0) return;
+        foreach (var gun in firstGuns) guns.Add(gun);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
