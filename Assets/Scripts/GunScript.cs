@@ -26,17 +26,13 @@ public class GunScript : MonoBehaviour
     [Header("UI VARIABLES")] 
     private GameObject canvas;
     public GameObject flatBullets;
-
-    public Image weaponImage; 
+    public Image weaponImage;
     
-    //public int ammo;
-    [HideInInspector] public int ammoRemainder;
     private bool reloading;
     private Color32 darkBulletColor;
-
     public TextMeshProUGUI ammoText;
     
-    public static List<Gun> selectedGuns = new List<Gun>();
+    public List<Gun> selectedGuns = new List<Gun>();
 
     private void Awake()
     {
@@ -44,26 +40,18 @@ public class GunScript : MonoBehaviour
         playerTransform = transform.parent;
         mainCam = Camera.main;
         canvas = GameObject.FindGameObjectWithTag("Canvas");
-
-        if (selectedGuns.Contains(currentGun))
-        {
-            currentGun = selectedGuns[gunIndex];
-        }
-        else
-        {
-            currentGun = Instantiate(currentGun);
-            selectedGuns.Add(currentGun);
-        }
+        darkBulletColor = new Color32(80,80,80,255);
         
-        gunSr.sprite = currentGun.gunSprite;
         shotPoint = transform.Find(currentGun.shotPoint);
-        UpdateUI();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        darkBulletColor = new Color32(80,80,80,255);
+        selectedGuns = GameManager.guns;
+        currentGun = selectedGuns[gunIndex];
+        gunSr.sprite = currentGun.gunSprite;
+        UpdateUI();
         UpdateAmmo();
     }
 
@@ -295,12 +283,6 @@ public class GunScript : MonoBehaviour
             currentGun = selectedGuns[gunIndex]; 
             UpdateUI();
             UpdateAmmo();
-            return;
         }
-        
-        currentGun = Instantiate(currentGun);
-        selectedGuns.Add(currentGun);
-        UpdateUI();
-        UpdateAmmo();
     }
 }

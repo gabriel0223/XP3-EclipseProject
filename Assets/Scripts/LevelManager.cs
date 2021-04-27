@@ -16,6 +16,7 @@ public class LevelManager : MonoBehaviour
     private GunScript gunScript;
     private static int ammo;
     private static int ammoRemainder;
+    private static int currentGunIndex;
     private static int scenesLoaded = 0; 
 
     private void Awake()
@@ -86,8 +87,7 @@ public class LevelManager : MonoBehaviour
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             
             playerRotation = player.transform.rotation;
-            // ammo = gunScript.ammo;
-            // ammoRemainder = gunScript.ammoRemainder;
+            currentGunIndex = gunScript.gunIndex;
         }
     }
     
@@ -129,9 +129,6 @@ public class LevelManager : MonoBehaviour
 
     void PersistAmmo()
     {
-        // if (scenesLoaded == 0) return;
-        //
-        // gunScript.ammo = ammo;
-        // gunScript.ammoRemainder = ammoRemainder;
+        gunScript.gunIndex = currentGunIndex;
     }
 }

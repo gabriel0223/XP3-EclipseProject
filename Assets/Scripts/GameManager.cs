@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
 
         if (guns.Count != 0) return;
-        foreach (var gun in firstGuns) guns.Add(gun);
+        foreach (var gun in firstGuns) guns.Add(Instantiate(gun));
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)

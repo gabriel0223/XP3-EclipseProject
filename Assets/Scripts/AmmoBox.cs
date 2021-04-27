@@ -1,14 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 
 public class AmmoBox : MonoBehaviour
 {
     private PlayerInteraction playerInteraction;
+    public Gun gun;
     public GunScript gunScript;
     public GameObject ammoBoxUI;
+    private SpriteRenderer weaponFlat;
     public int ammo;
     private bool isClose;
     
@@ -16,6 +20,7 @@ public class AmmoBox : MonoBehaviour
     void Start()
     {
         playerInteraction = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>();
+        weaponFlat = ammoBoxUI.transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -38,6 +43,7 @@ public class AmmoBox : MonoBehaviour
             isClose = true;
             ammoBoxUI.GetComponentInChildren<TextMeshProUGUI>().SetText(ammo.ToString());
             ammoBoxUI.SetActive(true);
+            weaponFlat.sprite = gun.flatImage;
         }
     }
     
@@ -52,10 +58,16 @@ public class AmmoBox : MonoBehaviour
 
     public void TakeAmmo()
     {
-        AudioManager.instance.PlayRandomBetweenSounds(new []{"AmmoPickup1", "AmmoPickup2", "AmmoPickup3"});
-        gunScript.ammoRemainder += ammo;
-        gunScript.UpdateAmmo();
-        ammoBoxUI.SetActive(false);
-        Destroy(gameObject);
+        foreach (var g in GameManager.guns)
+        {
+            if (gun.name.Equals(g.name))
+            {
+                AudioManager.instance.PlayRandomBetweenSounds(new []{"AmmoPickup1", "AmmoPickup2", "AmmoPickup3"});
+                g.ammoRemainder += ammo;
+                gunScript.UpdateAmmo();
+                ammoBoxUI.SetActive(false);
+                Destroy(gameObject);
+            }
+        }
     }
 }
