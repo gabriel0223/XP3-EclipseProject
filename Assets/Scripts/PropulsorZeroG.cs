@@ -103,7 +103,7 @@ public class PropulsorZeroG : MonoBehaviour
     {
         var collisionForce = other.relativeVelocity.magnitude;
 
-        //Debug.Log(collisionForce);
+        Debug.Log(collisionForce);
         
         switch (collisionForce)
         {
@@ -116,7 +116,8 @@ public class PropulsorZeroG : MonoBehaviour
                 break;
 
             case float n when n >= 1:
-                //Debug.Log("BATEU FRACO");
+                Debug.Log("BATEU FRACO");
+                AudioManager.instance.PlayRandomBetweenSounds(new []{"WeakImpact1", "WeakImpact2", "WeakImpact3"});
                 break;
             default:
                 //Debug.Log("FRAQUÍSSIMO");

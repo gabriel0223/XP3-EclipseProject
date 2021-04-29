@@ -8,13 +8,13 @@ using UnityEngine.UI;
 
 public class Interactive : MonoBehaviour
 {
-
     [Header("NPC VARIABLES")]
     public GameObject dialoguePlayer;
     private DialoguePlayer dialoguePlayerScript;
     public Dialogue dialogue;
     private GameObject canvas;
-    
+    //private ItemPanel itemPanel;
+
     [Header("DOCUMENT VARIABLES")]
     public GameObject documentPanel;
     public Document document;
@@ -87,15 +87,10 @@ public class Interactive : MonoBehaviour
 
         if (item != null)
         {
-            Time.timeScale = 0;
-            GameManager.instance.blockPlayerMovement = true;
-            itemPanel.SetActive(true);
-        
-            itemPanel.GetComponentInChildren<RawImage>().texture = item.itemImage;
-            //itemPanel.GetComponentInChildren<RawImage>().SetNativeSize();
-            GameManager.instance.ActivateBlur();
+            if (item.itemType == InventoryItem.ItemType.Examinable)
+                itemPanel.GetComponent<ItemPanel>().OpenItemPanel(item);
+            
             GameManager.instance.AddItemToInventory(item);
-        
             Destroy(gameObject);
         }
 
@@ -104,7 +99,9 @@ public class Interactive : MonoBehaviour
             GameManager.instance.blockPlayerMovement = true;
             GameManager.instance.isSelectingItem = true;
             inventoryNavigation.interactedObject = this;
-            inventory.OpenInventory();
+            inventory.OpenInventory(true);
         }
     }
+
+
 }

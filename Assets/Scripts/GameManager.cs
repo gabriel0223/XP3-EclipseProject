@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public bool isSelectingItem;
     public bool interactingUI;
     public Inventory inventory;
+    public static float playerHealth = 20;
     private VolumeProfile volume;
 
     public static List<InventoryItem> currentItems = new List<InventoryItem>();
@@ -63,6 +64,8 @@ public class GameManager : MonoBehaviour
         {
             Pause();
         }
+        
+        Debug.Log(playerHealth);
     }
 
     public void AddItemToInventory(InventoryItem item)
@@ -76,6 +79,23 @@ public class GameManager : MonoBehaviour
                 inventory.isFull[i] = true;
                 itemsCollected.Add(item, item.name);
                 currentItems.Add(item);
+                break;
+            }
+        }  
+    }
+    
+    public void RemoveItemFromInventory(InventoryItem item)
+    {
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
+            if (inventory.isFull[i] == false) return;
+            
+            if (inventory.slots[i].GetComponent<Slot>().item == item)
+            {
+                inventory.slots[i].GetComponent<Slot>().item = null;
+                inventory.slots[i].transform.GetChild(0).gameObject.SetActive(false); //enable icon
+                inventory.isFull[i] = false;
+                currentItems.Remove(item);
                 break;
             }
         }  

@@ -25,12 +25,12 @@ public class Inventory : MonoBehaviour
         {
             if (inventory.activeSelf)
             {
-                CloseInventory();
+                CloseInventory(true);
             }
             else
             {
                 if (!GameManager.instance.blockPlayerMovement)
-                    OpenInventory();
+                    OpenInventory(true);
             }
         }
 
@@ -38,12 +38,12 @@ public class Inventory : MonoBehaviour
         {
             if (inventory.activeSelf)
             {
-                CloseInventory();
+                CloseInventory(true);
             }
         }
     }
 
-    public void OpenInventory()
+    public void OpenInventory(bool playSound)
     {
         if (!GameManager.instance.interactingUI)
         {
@@ -53,7 +53,7 @@ public class Inventory : MonoBehaviour
             //Time.timeScale = 0f;
             GameManager.instance.blockPlayerMovement = true;
             GameManager.instance.interactingUI = true;
-            AudioManager.instance.Play("OpenInventory");
+            if (playSound) AudioManager.instance.Play("OpenInventory");
             weaponUI.SetActive(false);
             inventory.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
@@ -62,7 +62,7 @@ public class Inventory : MonoBehaviour
         
     }
     
-    public void CloseInventory()
+    public void CloseInventory(bool playSound)
     {
         //Time.timeScale = 1f;
         foreach (var slot in slots)
@@ -76,7 +76,7 @@ public class Inventory : MonoBehaviour
         GameManager.instance.blockPlayerMovement = false;
         GameManager.instance.isSelectingItem = false;
         GameManager.instance.interactingUI = false;
-        AudioManager.instance.Play("CloseInventory");
+        if (playSound) AudioManager.instance.Play("CloseInventory");
         weaponUI.SetActive(true);
         inventory.SetActive(false);
     }

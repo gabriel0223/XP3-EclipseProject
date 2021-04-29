@@ -1481,6 +1481,7 @@
             </e>
           </e>
         </e>
+        <e p="Medkit.cs" t="Include" />
         <e p="NavMeshPlus-master" t="Include">
           <e p="NavMeshComponents" t="Include">
             <e p="Editor" t="Include">
@@ -1547,6 +1548,7 @@
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PlayerMovementHorizontal.cs" t="Include" />
           <e p="PostProcessingEffects.cs" t="Include" />
+          <e p="PreventDeselectionGroup.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
           <e p="Propulsor.cs" t="Include" />
           <e p="PropulsorZeroG.cs" t="Include" />

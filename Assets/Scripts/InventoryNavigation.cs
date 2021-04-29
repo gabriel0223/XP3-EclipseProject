@@ -10,9 +10,10 @@ public class InventoryNavigation : MonoBehaviour
     public PlayerInteraction playerInteraction;
     public TextMeshProUGUI itemName;
     public TextMeshProUGUI itemText;
+    public ItemPanel itemPanel;
     private InventoryItem item;
 
-    private Inventory inventory;
+    public Inventory inventory;
 
     [HideInInspector] public InventoryItem requestedItem;
     [HideInInspector] public Interactive interactedObject;
@@ -51,7 +52,7 @@ public class InventoryNavigation : MonoBehaviour
         {
             if (item == interactedObject.requestedItem)
             {
-                inventory.CloseInventory();
+                inventory.CloseInventory(true);
                 interactedObject.interactiveMethod.Invoke();
                 interactedObject.tag = "Untagged";
                 playerInteraction.canInteract = false;
