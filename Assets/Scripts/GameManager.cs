@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -70,6 +71,18 @@ public class GameManager : MonoBehaviour
 
     public void AddItemToInventory(InventoryItem item)
     {
+        if (item.itemType == InventoryItem.ItemType.Examinable)
+        {
+            AddExaminableItem(item);
+        }
+        else
+        {
+            AddConsumableItem(item); 
+        }
+    }
+
+    public void AddExaminableItem(InventoryItem item)
+    {
         for (int i = 0; i < inventory.slots.Length; i++)
         {
             if (inventory.isFull[i] == false)
@@ -81,7 +94,36 @@ public class GameManager : MonoBehaviour
                 currentItems.Add(item);
                 break;
             }
-        }  
+        } 
+    }
+
+    public void AddConsumableItem(InventoryItem item)
+    {
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
+            if (inventory.isFull[i] == false) continue;
+
+            if (inventory.slots[i].GetComponent<Slot>().item == item)
+            {
+                inventory.slots[i].GetComponent<Slot>().itemQuantity++;
+                return;
+            }
+        }
+        
+        //IF IT'S THE FIRST CONSUMABLE IN THE SLOT, THEN:
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
+            if (inventory.isFull[i] == false)
+            {
+                inventory.slots[i].GetComponent<Slot>().item = item;
+                inventory.slots[i].GetComponent<Slot>().itemQuantity = 1;
+                inventory.slots[i].transform.GetChild(0).gameObject.SetActive(true); //enable icon
+                inventory.isFull[i] = true;
+                itemsCollected.Add(item, item.name);
+                currentItems.Add(item);
+                break;
+            }
+        }
     }
     
     public void RemoveItemFromInventory(InventoryItem item)

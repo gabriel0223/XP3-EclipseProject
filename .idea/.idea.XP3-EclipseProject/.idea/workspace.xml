@@ -20,19 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b1a2590-f641-4fbd-ac70-cf6b65f5d7c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player .prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GunScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GunScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Slot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TerminalFiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TerminalFiles.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/SFX/Guns/AssaultRifleClipOut01.ogg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Guns/AssaultRifleClipOut01.ogg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Weapons/Fortona.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Weapons/Fortona.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Weapons/Metralhadora.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Weapons/Metralhadora.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Weapons/Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Weapons/Pistol.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,12 +51,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactive.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryNavigation.cs" />
         <option value="$PROJECT_DIR$/Assets/Medkit.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Slot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TerminalFiles.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GunScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slot.cs" />
       </list>
     </option>
   </component>
@@ -127,6 +119,7 @@
       <workItem from="1619548940577" duration="8795000" />
       <workItem from="1619635525022" duration="14215000" />
       <workItem from="1619918865291" duration="3606000" />
+      <workItem from="1620197962448" duration="2668000" />
     </task>
     <servers />
   </component>

@@ -18,6 +18,8 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
     public int slotIndex;
     public GameObject buttomPrompt;
     private TextMeshProUGUI promptText;
+    public int itemQuantity;
+    private TextMeshProUGUI itemQuantityText;
 
     private void Awake()
     {
@@ -25,6 +27,7 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
         inventoryNavigation = transform.parent.GetComponent<InventoryNavigation>();
         itemPanel = inventoryNavigation.itemPanel;
         promptText = buttomPrompt.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        itemQuantityText = GetComponentInChildren<TextMeshProUGUI>(true);
     }
 
     // Start is called before the first frame update
@@ -46,6 +49,21 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
         else
         {
             itemIcon.texture = null;
+        }
+
+        ShowItemQuantity();
+    }
+
+    private void ShowItemQuantity()
+    {
+        if (itemQuantity > 1)
+        {
+            itemQuantityText.gameObject.SetActive(true);
+            itemQuantityText.SetText(itemQuantity.ToString());
+        }
+        else
+        {
+            itemQuantityText.gameObject.SetActive(false);
         }
     }
 
@@ -97,8 +115,18 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
                 break;
             case InventoryItem.ItemType.Consumable:
                 item.consumableAction.Invoke();
-                inventoryNavigation.inventory.CloseInventory(false);
-                GameManager.instance.RemoveItemFromInventory(item);
+
+                if (itemQuantity == 1)
+                {
+                    GameManager.instance.RemoveItemFromInventory(item); 
+                    buttomPrompt.SetActive(false);
+                }
+                else
+                {
+                    itemQuantity--;
+                }
+                
+                //inventoryNavigation.inventory.CloseInventory(false);
                 break;
         }
     }
