@@ -17,7 +17,8 @@ public class Gun : ScriptableObject
     public int maxAmmo;
     public float reloadTime;
     public float damage;
-    [Header("AUDIO")]
+    [Header("AUDIO")] 
+    public string equipSound;
     public string[] shotSounds;
     public string clipOutSound, clipInSound;
     public string emptyMagazineSound;

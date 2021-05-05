@@ -66,9 +66,20 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
-
         
         s.source.Play();
+    }
+    
+    public void PlayOneShot(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+        
+        s.source.PlayOneShot(s.clip);
     }
 
     public void PlaySong(string name)
@@ -139,6 +150,11 @@ public class AudioManager : MonoBehaviour
     public void PlayRandomBetweenSounds(string[] names)
     {
         Play(names[Random.Range(0, names.Length)]);
+    }
+    
+    public void PlayOneShotRandomBetweenSounds(string[] names)
+    {
+        PlayOneShot(names[Random.Range(0, names.Length)]);
     }
     
     public bool IfSoundIsPlaying(string soundName)

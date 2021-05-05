@@ -91,12 +91,13 @@ public class GunScript : MonoBehaviour
                     {
                         Shoot();
                     }
-                    else
-                    {
-                        if (!AudioManager.instance.IfSoundIsPlaying(currentGun.emptyMagazineSound))
-                            AudioManager.instance.Play(currentGun.emptyMagazineSound);
-                    }
                 }
+            }
+
+            if (Input.GetMouseButtonDown(0) && !reloading)
+            {
+                if (currentGun.ammo > 0) return;
+                AudioManager.instance.Play(currentGun.emptyMagazineSound);
             }
 
             if (Input.GetKeyDown(KeyCode.R) && !reloading)
@@ -141,6 +142,7 @@ public class GunScript : MonoBehaviour
     public void Shoot()
     {
         AudioManager.instance.PlayRandomBetweenSounds(currentGun.shotSounds);
+        AudioManager.instance.PlayOneShotRandomBetweenSounds(currentGun.shotSounds);
         Instantiate(currentGun.projectile, shotPoint.position, transform.rotation);
         currentGun.ammo--;
         UpdateAmmo();
@@ -277,6 +279,7 @@ public class GunScript : MonoBehaviour
         currentGun = GameManager.guns[gunIndex];
         gunSr.sprite = currentGun.gunSprite;
         shotPoint = transform.Find(currentGun.shotPoint);
+        AudioManager.instance.Play(currentGun.equipSound);
 
         if (selectedGuns.Any(gun => currentGun.name.Equals(gun.name)))
         {

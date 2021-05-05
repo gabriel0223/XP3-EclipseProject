@@ -26,6 +26,7 @@ public class TerminalFiles : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab))
         {
+            MuteSoundWave();
             CloseTerminal();
         }
     }

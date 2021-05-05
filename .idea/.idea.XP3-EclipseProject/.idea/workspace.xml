@@ -20,24 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b1a2590-f641-4fbd-ac70-cf6b65f5d7c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player .prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactive.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventoryItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventoryItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventoryNavigation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventoryNavigation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PropulsorZeroG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PropulsorZeroG.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GunScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GunScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Slot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Mixers/SFX.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/Mixers/SFX.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TerminalFiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TerminalFiles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/SFX/Guns/AssaultRifleClipOut01.ogg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Guns/AssaultRifleClipOut01.ogg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Weapons/Fortona.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Weapons/Fortona.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Weapons/Metralhadora.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Weapons/Metralhadora.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Weapons/Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Weapons/Pistol.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +50,6 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GunScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AmmoBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PropulsorZeroG.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PreventDeselectionGroup.cs" />
@@ -67,6 +61,10 @@
         <option value="$PROJECT_DIR$/Assets/Medkit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Slot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TerminalFiles.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GunScript.cs" />
       </list>
     </option>
   </component>
@@ -127,7 +125,8 @@
       <updated>1619290768392</updated>
       <workItem from="1619290793337" duration="19966000" />
       <workItem from="1619548940577" duration="8795000" />
-      <workItem from="1619635525022" duration="12135000" />
+      <workItem from="1619635525022" duration="14215000" />
+      <workItem from="1619918865291" duration="3606000" />
     </task>
     <servers />
   </component>
@@ -146,6 +145,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

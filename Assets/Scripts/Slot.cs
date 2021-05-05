@@ -16,12 +16,15 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
     private ItemPanel itemPanel;
     private bool selected;
     public int slotIndex;
+    public GameObject buttomPrompt;
+    private TextMeshProUGUI promptText;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         inventoryNavigation = transform.parent.GetComponent<InventoryNavigation>();
         itemPanel = inventoryNavigation.itemPanel;
+        promptText = buttomPrompt.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
     }
 
     // Start is called before the first frame update
@@ -57,12 +60,30 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
         anim.SetBool("Selected", true);
         AudioManager.instance.Play("UINavigation");
 
+        if (item == null || GameManager.instance.isSelectingItem)
+        {
+            buttomPrompt.SetActive(false);
+            return;
+        }
+
+        switch (item.itemType)
+        {
+            case InventoryItem.ItemType.Examinable:
+                buttomPrompt.SetActive(true);
+                promptText.SetText("Examinar");
+                break;
+            case InventoryItem.ItemType.Consumable:
+                buttomPrompt.SetActive(true);
+                promptText.SetText("Usar");
+                break;
+        }
+
         selected = true;
     }
 
     public void OnSubmit(BaseEventData eventData)
     {
-        if (item == null) return;
+        if (item == null || GameManager.instance.isSelectingItem) return;
 
         InteractWithItem();
     }
@@ -102,9 +123,9 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
     // }
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (selected)
-        {
-            InteractWithItem();
-        }
+        // if (selected)
+        // {
+        //     InteractWithItem();
+        // }
     }
 }
