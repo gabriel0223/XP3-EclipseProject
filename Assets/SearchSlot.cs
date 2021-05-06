@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,16 +5,17 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHandler, IPointerClickHandler//, IPointerEnterHandler, IPointerExitHandler
+public class SearchSlot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHandler, IPointerClickHandler//, IPointerEnterHandler, IPointerExitHandler
 {
     public InventoryItem item;
 
     public RawImage itemIcon;
     private Animator anim;
-    private InventoryNavigation inventoryNavigation;
     private ItemPanel itemPanel;
     private bool selected;
+    private SearchInventory searchInventory;
     public int slotIndex;
+    public TextMeshProUGUI itemName;
     public GameObject buttomPrompt;
     private TextMeshProUGUI promptText;
     public int itemQuantity;
@@ -24,10 +24,10 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        inventoryNavigation = transform.parent.GetComponent<InventoryNavigation>();
         promptText = buttomPrompt.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         itemQuantityText = GetComponentInChildren<TextMeshProUGUI>(true);
-        itemPanel = inventoryNavigation.itemPanel;
+        itemIcon = GetComponentInChildren<RawImage>(true);
+        searchInventory = transform.parent.GetComponent<SearchInventory>();
     }
 
     // Start is called before the first frame update
@@ -42,6 +42,15 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
     // Update is called once per frame
     void Update()
     {
+        if (item != null)
+        {
+            itemIcon.texture = item.itemIcon;
+        }
+        else
+        {
+            itemIcon.texture = null;
+        }
+
         ShowItemQuantity();
     }
 
@@ -72,21 +81,12 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
         if (item == null || GameManager.instance.isSelectingItem)
         {
             buttomPrompt.SetActive(false);
+            itemName.SetText("");
             return;
         }
-
-        switch (item.itemType)
-        {
-            case InventoryItem.ItemType.Examinable:
-                buttomPrompt.SetActive(true);
-                promptText.SetText("Examinar");
-                break;
-            case InventoryItem.ItemType.Consumable:
-                buttomPrompt.SetActive(true);
-                promptText.SetText("Usar");
-                break;
-        }
-
+        
+        itemName.SetText(item.itemName);
+        buttomPrompt.SetActive(true);
         selected = true;
     }
 
@@ -94,7 +94,37 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
     {
         if (item == null || GameManager.instance.isSelectingItem) return;
 
-        InteractWithItem();
+        TakeItem();
+    }
+
+    public void TakeItem()
+    {
+        var itemToBeTaken = searchInventory.currentSearchable.items.Find(i => i.item == item);
+
+        buttomPrompt.SetActive(false);
+        SetIcon(false);
+        itemName.SetText("");
+
+        var timesToAdd = itemQuantity;
+        for (int i = 0; i < timesToAdd; i++)
+        {
+            GameManager.instance.AddItemToInventory(item);
+            itemToBeTaken.quantity--;
+            itemQuantity--;
+        }
+
+        if (itemQuantity == 0)
+        {
+            item = null;
+            itemQuantityText.gameObject.SetActive(false);
+            searchInventory.currentSearchable.items.Remove(itemToBeTaken);
+            searchInventory.currentSearchable.items.TrimExcess();
+        }
+    }
+
+    public void SetIcon(bool value)
+    {
+        itemIcon.gameObject.SetActive(value);
     }
 
     public void InteractWithItem()
@@ -117,7 +147,6 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
                     itemQuantity--;
                 }
                 
-                //inventoryNavigation.inventory.CloseInventory(false);
                 break;
         }
     }
@@ -130,3 +159,4 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
         // }
     }
 }
+

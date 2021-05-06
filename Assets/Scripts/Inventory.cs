@@ -58,6 +58,19 @@ public class Inventory : MonoBehaviour
             inventory.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(inventory.transform.GetChild(0).gameObject);
+
+            foreach (var slot in slots)
+            {
+                if (slot.GetComponent<Slot>().item != null)
+                {
+                    slot.GetComponent<Slot>().itemIcon.texture = slot.GetComponent<Slot>().item.itemIcon;
+                }
+                else
+                {
+                    slot.GetComponent<Slot>().itemIcon.texture = null;
+                }
+            }
+            
         }
         
     }

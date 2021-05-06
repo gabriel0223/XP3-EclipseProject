@@ -1575,6 +1575,9 @@
           <e p="ZDoor.cs" t="Include" />
           <e p="ZNavigation.cs" t="Include" />
         </e>
+        <e p="Searchable.cs" t="Include" />
+        <e p="SearchInventory.cs" t="Include" />
+        <e p="SearchSlot.cs" t="Include" />
         <e p="Sound" t="Include">
           <e p="Lista_de_sons.txt" t="Include" />
         </e>

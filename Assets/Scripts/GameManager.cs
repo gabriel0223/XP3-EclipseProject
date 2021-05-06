@@ -65,8 +65,6 @@ public class GameManager : MonoBehaviour
         {
             Pause();
         }
-        
-        Debug.Log(playerHealth);
     }
 
     public void AddItemToInventory(InventoryItem item)
