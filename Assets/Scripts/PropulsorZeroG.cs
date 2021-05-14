@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ public class PropulsorZeroG : MonoBehaviour
     private bool canPlaySound = true;
 
     private Camera mainCam;
+    public ParticleSystem[] psPropellant;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,7 @@ public class PropulsorZeroG : MonoBehaviour
         
             rb2d.AddForce(transform.right * moveAmountH);
             rb2d.AddForce(transform.up * moveAmountV);
+            PropellantParticles();
             
             if (canPlaySound)
             {
@@ -97,6 +100,77 @@ public class PropulsorZeroG : MonoBehaviour
         }
         
         //Debug.Log(rb2d.velocity.magnitude);
+    }
+
+    private void PropellantParticles()
+    {
+        Vector2 move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        Debug.Log(move);
+        
+        if (move != Vector2.zero)
+        {
+            if (move.Equals(Vector2.right))
+            {
+                SetActiveParticles(new[] {1, 3});
+            }
+            else if (move.Equals(Vector2.left))
+            {
+                SetActiveParticles(new[] {2, 4});
+            }
+            else if (move.Equals(Vector2.up))
+            {
+                SetActiveParticles(new[] {3, 4});
+            }
+            else if (move.Equals(Vector2.down))
+            {
+                SetActiveParticles(new[] {1, 2});
+            }
+            else if (move.Equals(Vector2.one))
+            {
+                SetActiveParticles(new[] {3});
+            }
+            else if (move.Equals(-Vector2.one))
+            {
+                SetActiveParticles(new[] {2});
+            }
+            else if (move.Equals(new Vector2(-1, 1)))
+            {
+                SetActiveParticles(new[] {4});
+            }
+            else if (move.Equals(new Vector2(1, -1)))
+            {
+                SetActiveParticles(new[] {1});
+            }
+        }
+        else
+        {
+            SetActiveParticles(new int[]{});
+        }
+
+        void SetActiveParticles(int[] remainingParticles)
+        {
+            foreach (var ps in psPropellant)
+            {
+                if (remainingParticles.Contains(Array.IndexOf(psPropellant, ps) + 1))
+                {
+                    PlayParticleSystem(Array.IndexOf(psPropellant, ps));
+                }
+                else
+                {
+                    StopParticleSystem(Array.IndexOf(psPropellant, ps));
+                }
+            }
+        }
+
+        void PlayParticleSystem(int index)
+        {
+            if (!psPropellant[index].isPlaying) psPropellant[index].Play();
+        }
+        
+        void StopParticleSystem(int index)
+        {
+            if (psPropellant[index].isPlaying) psPropellant[index].Stop();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
