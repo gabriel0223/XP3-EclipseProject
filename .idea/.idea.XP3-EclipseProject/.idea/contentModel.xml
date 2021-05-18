@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Gabriel\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Gabriel\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_XP3-EclipseProject.1841585852.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Gabriel\Documents\Unity\XP3-EclipseProject" t="IncludeRecursive">
+    <e p="C:\Users\Gabriel\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_XP3-EclipseProject.1400988146.00" t="ExcludeRecursive" />
+    <e p="D:\Documentos\Unity\XP3-EclipseProject" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -1481,7 +1481,6 @@
             </e>
           </e>
         </e>
-        <e p="Medkit.cs" t="Include" />
         <e p="NavMeshPlus-master" t="Include">
           <e p="NavMeshComponents" t="Include">
             <e p="Editor" t="Include">
@@ -1506,7 +1505,9 @@
             </e>
           </e>
         </e>
+        <e p="PlayerCollision.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="AmbiencePlayer.cs" t="Include" />
           <e p="AmmoBox.cs" t="Include" />
           <e p="AudioDoc.cs" t="Include" />
           <e p="AudioManager.cs" t="Include" />
@@ -1526,6 +1527,7 @@
           <e p="GameManager.cs" t="Include" />
           <e p="Gun.cs" t="Include" />
           <e p="GunScript.cs" t="Include" />
+          <e p="HealthBar.cs" t="Include" />
           <e p="ImageDoc.cs" t="Include" />
           <e p="Interactive.cs" t="Include" />
           <e p="Inventory.cs" t="Include" />
@@ -1540,6 +1542,7 @@
           <e p="LookAtMouse.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="MapScript.cs" t="Include" />
+          <e p="Medkit.cs" t="Include" />
           <e p="MouseCursor.cs" t="Include" />
           <e p="PauseMenu.cs" t="Include" />
           <e p="Pickup.cs" t="Include" />
@@ -1555,6 +1558,9 @@
           <e p="ProximityDoor.cs" t="Include" />
           <e p="ProximitySensor.cs" t="Include" />
           <e p="RotateZeroG.cs" t="Include" />
+          <e p="Searchable.cs" t="Include" />
+          <e p="SearchInventory.cs" t="Include" />
+          <e p="SearchSlot.cs" t="Include" />
           <e p="SetRotationTrigger.cs" t="Include" />
           <e p="Slot.cs" t="Include" />
           <e p="SongTrigger.cs" t="Include" />
@@ -1575,9 +1581,6 @@
           <e p="ZDoor.cs" t="Include" />
           <e p="ZNavigation.cs" t="Include" />
         </e>
-        <e p="Searchable.cs" t="Include" />
-        <e p="SearchInventory.cs" t="Include" />
-        <e p="SearchSlot.cs" t="Include" />
         <e p="Sound" t="Include">
           <e p="Lista_de_sons.txt" t="Include" />
         </e>

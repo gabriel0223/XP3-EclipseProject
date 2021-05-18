@@ -46,159 +46,356 @@ MonoBehaviour:
   sounds:
   - name: JetpackSound
     clip: {fileID: 8300000, guid: eaa1e0d188bdbf149b75901de6874fb4, type: 3}
-    volume: 0.651
+    volume: 0.75
     pitch: 0.84
     loop: 1
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: OpenInventory
     clip: {fileID: 8300000, guid: f14b2d6c2c0d85e4fbb00991cc990f6c, type: 3}
     volume: 0.15
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: CloseInventory
     clip: {fileID: 8300000, guid: dbfe709cb55981a45b9e7038f45e1892, type: 3}
     volume: 0.15
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: UINavigation
     clip: {fileID: 8300000, guid: cf474c364807d44489caa87e7854f272, type: 3}
     volume: 0.25
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: WrongItem
     clip: {fileID: 8300000, guid: 8de5003e92794594eb66ee384110e74a, type: 3}
     volume: 0.25
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: PistolEquip01
+    clip: {fileID: 8300000, guid: e342acaee37f5b64babd6edad063bf0f, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: PistolFire1
     clip: {fileID: 8300000, guid: 7a674acda1a431344843d37f2f99b68c, type: 3}
     volume: 0.2
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: PistolFire2
     clip: {fileID: 8300000, guid: 2ee5e2003be852741b54e765c04f21a2, type: 3}
     volume: 0.2
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: PistolFire3
     clip: {fileID: 8300000, guid: 338d1f5e568130945871db0b8ff0a01b, type: 3}
     volume: 0.2
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: AmmoPickup1
     clip: {fileID: 8300000, guid: df731d4545f6ff846826a43b5f1a81b9, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: AmmoPickup2
     clip: {fileID: 8300000, guid: b6a50b2001de09e41a7692e7ce320e61, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: AmmoPickup3
     clip: {fileID: 8300000, guid: 1e16ef24c41f86445b6cb15e2c847570, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: PistolEmpty
     clip: {fileID: 8300000, guid: b4c84b87353cdac48afaa4b519312f1b, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: PistolClipOut
     clip: {fileID: 8300000, guid: 360fe255b243c664bbe9f516725f9322, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: PistolClipIn
     clip: {fileID: 8300000, guid: 6c6a0d3e883fdab4889a7fd60f9630b8, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: GravityAlert
     clip: {fileID: 8300000, guid: daa9e1007c4a19a4c88b69d2a740eb9b, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: BGM_Suspense1
     clip: {fileID: 8300000, guid: d35cb84e01e5a4247aa8700e368378cd, type: 3}
     volume: 0.5
     pitch: 1
     loop: 1
+    mixerGroup: {fileID: -2713722289036460747, guid: aeabe8a47130b534ba4ea89a619bce12, type: 2}
     source: {fileID: 0}
   - name: TerminalAbrir
     clip: {fileID: 8300000, guid: 07179bada26e76241941d97ccab7da1f, type: 3}
     volume: 0.35
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: TerminalAba
     clip: {fileID: 8300000, guid: 16b6b2b9311b3934b82c5c3132cecbdb, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: TerminalPassagem
     clip: {fileID: 8300000, guid: 901a91c13974a29469ee383d29391f74, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: TerminalFechar
     clip: {fileID: 8300000, guid: 35b8d802fa2c7c34cabb6e475554ee8d, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: MenuSong
     clip: {fileID: 8300000, guid: bce8c1aec4cbd7640a2b6e9bea428995, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: aeabe8a47130b534ba4ea89a619bce12, type: 2}
     source: {fileID: 0}
   - name: KatiaAL01
     clip: {fileID: 8300000, guid: 39a4ed8d2f6fcf1479978df9625109dc, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: PortaLadoAbrir
     clip: {fileID: 8300000, guid: ab53e6f3e5636f64cb3ce5bd816127f0, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: PortaLadoFechar
     clip: {fileID: 8300000, guid: e19a5da428bc8284ead096fd9012f3d0, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: PortaLadoTravar
     clip: {fileID: 8300000, guid: 732aec4974274e944867f2f6e1c514d6, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   - name: O2Alert
     clip: {fileID: 8300000, guid: 93e0fded171595e4680a50176b1026dd, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: WeakImpact1
+    clip: {fileID: 8300000, guid: 16b5144267dcfc54286b196cf2bcb10c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 2928499370812677869, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: WeakImpact2
+    clip: {fileID: 8300000, guid: 589bb31c819976b40a59dfb303aaa142, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 2928499370812677869, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: WeakImpact3
+    clip: {fileID: 8300000, guid: 7ce6be73e9c8e1b4694af8ede61c1da1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 2928499370812677869, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: AssaultRifleEquip01
+    clip: {fileID: 8300000, guid: ac91629b42b9f6a46a0e224976886bcc, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: AssaultRifleFire01
+    clip: {fileID: 8300000, guid: 115b7ae12ecdbb34e92ab594841eadec, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: AssaultRifleFire02
+    clip: {fileID: 8300000, guid: 58ac90f380181594fad0e4279ce8a6ba, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: AssaultRifleFire02
+    clip: {fileID: 8300000, guid: 58ac90f380181594fad0e4279ce8a6ba, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: AssaultRifleFire03
+    clip: {fileID: 8300000, guid: 8fd5a8fb48b5fb443b605d54d7bea5ba, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: AssaultRifleFire04
+    clip: {fileID: 8300000, guid: 2b776a3b647af294187c20399fcc75b1, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: AssaultRifleClipIn01
+    clip: {fileID: 8300000, guid: 167f34acc987c744cb1e7f20ca63c3e0, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: AssaultRifleClipOut01
+    clip: {fileID: 8300000, guid: dbbec7c7af4f34a48a571db2eaca4262, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: AssaultRifleEmpty01
+    clip: {fileID: 8300000, guid: 0b7cb9c5924718645885d698c51b6cff, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: AmmoPickup04
+    clip: {fileID: 8300000, guid: f7667ecab04de3f4eaac355ff6ebcd93, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: AmmoPickup05
+    clip: {fileID: 8300000, guid: 29046c9c108faea43938cde456dd05d1, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: ArmarioAbrir
+    clip: {fileID: 8300000, guid: 625a106578592704bb534187602f32f3, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: ArmarioFechar
+    clip: {fileID: 8300000, guid: dff1dcf718728c94b818dd6c6e7f165c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: GravityEngine
+    clip: {fileID: 8300000, guid: a9dcf7c7539bc9f4383774bd24fec6dc, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: MediumImpact1
+    clip: {fileID: 8300000, guid: f32547b4afd48574c8cb977e37b90760, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: MediumImpact2
+    clip: {fileID: 8300000, guid: 4b9f2a5b7821a3c48baa25046b23d60b, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: MediumImpact3
+    clip: {fileID: 8300000, guid: bb961a9ca714a4448b5c4b3fbcd821a6, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: StrongImpact1
+    clip: {fileID: 8300000, guid: eb9438410855d874ead87572ea2cb4e7, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: StrongImpact2
+    clip: {fileID: 8300000, guid: e5726c61995213f43a90006e022eb8c5, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: StrongImpact3
+    clip: {fileID: 8300000, guid: 0f07d24d8c124f048b32f67e25856ffd, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
   source: {fileID: 0}
+  masterMixer: {fileID: 24300002, guid: 0d7af997f30dcca46afea6d0a908544e, type: 2}
+  musicMixer: {fileID: 24100000, guid: aeabe8a47130b534ba4ea89a619bce12, type: 2}
+  sfxMixer: {fileID: 24100000, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
   musicPlaying: 

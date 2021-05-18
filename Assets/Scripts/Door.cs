@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,10 +11,17 @@ public class Door : MonoBehaviour
     }
     
     public Sprite lockedDoorSprite, unlockedDoorSprite;
+    public Color lockedDoorLightColor, unlockedDoorLightColor;
+    public LightSprite2D doorLight;
     public DoorState doorState;
     public bool locked;
     private SpriteRenderer doorSr;
     private Animator anim;
+
+    private void Awake()
+    {
+        
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +45,7 @@ public class Door : MonoBehaviour
     {
         locked = false;
         doorSr.sprite = unlockedDoorSprite;
+        doorLight.color = unlockedDoorLightColor;
     }
     
     public void LockDoor()
@@ -90,7 +99,8 @@ public class Door : MonoBehaviour
             yield return null;
         }
         
-        doorSr.sprite = lockedDoorSprite; 
+        doorSr.sprite = lockedDoorSprite;
+        doorLight.color = lockedDoorLightColor;
         AudioManager.instance.Play("PortaLadoTravar");
     }
 }

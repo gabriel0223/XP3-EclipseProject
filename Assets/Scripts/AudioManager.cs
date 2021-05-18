@@ -69,6 +69,26 @@ public class AudioManager : MonoBehaviour
         
         s.source.Play();
     }
+
+    public void PlayClipAtGameObject(string name, GameObject gameObject, bool loop, float minDist, float maxDist)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+
+        s.source = gameObject.AddComponent<AudioSource>();
+        s.source.clip = s.clip;
+        s.source.volume = s.volume;
+        s.source.loop = loop;
+        s.source.spatialBlend = 1;
+        s.source.rolloffMode = AudioRolloffMode.Linear;
+        s.source.minDistance = minDist;
+        s.source.maxDistance = maxDist;
+        s.source.Play();
+    }
     
     public void PlayOneShot(string name)
     {

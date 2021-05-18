@@ -59,6 +59,7 @@ public class SearchInventory : MonoBehaviour
             currentSearchable.playerInteraction.keyPressIcon.SetActive(true);
         
         ClearSearchItems();
+        currentSearchable.Close();
         gameObject.SetActive(false);
     }
 

@@ -125,6 +125,7 @@ public class GunScript : MonoBehaviour
         {
             if (child.parent == playerTransform)
             {
+                if (child.name.Equals("HealthBar")) continue;
                 child.parent = null;
                 childrenRemoved.Add(child);
             }

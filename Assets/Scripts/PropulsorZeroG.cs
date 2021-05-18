@@ -105,8 +105,7 @@ public class PropulsorZeroG : MonoBehaviour
     private void PropellantParticles()
     {
         Vector2 move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        Debug.Log(move);
-        
+
         if (move != Vector2.zero)
         {
             if (move.Equals(Vector2.right))
@@ -170,32 +169,6 @@ public class PropulsorZeroG : MonoBehaviour
         void StopParticleSystem(int index)
         {
             if (psPropellant[index].isPlaying) psPropellant[index].Stop();
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        var collisionForce = other.relativeVelocity.magnitude;
-
-        Debug.Log(collisionForce);
-        
-        switch (collisionForce)
-        {
-            case float n when n >= 9:
-                //Debug.Log("BATEU FORTE");
-                break;
-
-            case float n when n >= 5:
-                //Debug.Log("BATEU MAIS OU MENOS");
-                break;
-
-            case float n when n >= 1:
-                Debug.Log("BATEU FRACO");
-                AudioManager.instance.PlayRandomBetweenSounds(new []{"WeakImpact1", "WeakImpact2", "WeakImpact3"});
-                break;
-            default:
-                //Debug.Log("FRAQUÍSSIMO");
-                break;
         }
     }
 }

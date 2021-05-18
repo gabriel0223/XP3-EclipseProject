@@ -11,16 +11,31 @@ public class SearchableItem
 }
 public class Searchable : MonoBehaviour
 {
+    public enum SearchableState
+    {
+        Open, Closed
+    }
+
+    public enum SearchableType
+    {
+        Cabinet, Crate
+    }
+
     [HideInInspector] public bool isClose;
     [HideInInspector] public PlayerInteraction playerInteraction;
+    private Animator anim;
+    public SearchableType searchableType;
     public SearchInventory searchInventory;
     public string name;
-    //public List<InventoryItem> items = new List<InventoryItem>();
+    public bool locked;
+    public SearchableState searchableState;
     public List<SearchableItem> items = new List<SearchableItem>();
 
     private void Awake()
     {
         playerInteraction = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>();
+        searchableState = SearchableState.Closed;
+        anim = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -34,16 +49,48 @@ public class Searchable : MonoBehaviour
     {
         if (isClose && Input.GetKeyDown(KeyCode.F))
         {
-            searchInventory.currentSearchable = this;
-            searchInventory.OpenInventory();
-            playerInteraction.keyPressIcon.SetActive(false);
+            if (searchableState == SearchableState.Open) return;
+            Search();
         }
+    }
+
+    void Search()
+    {
+        searchInventory.currentSearchable = this;
+        searchInventory.OpenInventory();
+        playerInteraction.keyPressIcon.SetActive(false);
+        anim.SetTrigger("Open");
+
+        switch (searchableType)
+        {
+            case SearchableType.Cabinet:
+                AudioManager.instance.Play("ArmarioAbrir");
+                break;
+        }
+        
+        searchableState = SearchableState.Open;
+    }
+
+    public void Close()
+    {
+        anim.SetTrigger("Close");
+        
+        switch (searchableType)
+        {
+            case SearchableType.Cabinet:
+                AudioManager.instance.Play("ArmarioFechar");
+                break;
+        }
+        
+        searchableState = SearchableState.Closed;
     }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            if (locked) return;
+            
             isClose = true;
             playerInteraction.keyPressIcon.SetActive(true);
         }

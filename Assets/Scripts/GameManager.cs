@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public bool isSelectingItem;
     public bool interactingUI;
     public Inventory inventory;
-    public static float playerHealth = 20;
+    public static float playerHealth = 5f;
     private VolumeProfile volume;
 
     public static List<InventoryItem> currentItems = new List<InventoryItem>();
