@@ -22,27 +22,11 @@
     <list default="true" id="9b1a2590-f641-4fbd-ac70-cf6b65f5d7c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Doors/Door.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Doors/Door.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Doors/ZDoor.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Doors/ZDoor.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FunkyCode/Demos - SmartLighting2D/Basic Scenes/1 - Basic Setup/Basic Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FunkyCode/Demos - SmartLighting2D/Basic Scenes/1 - Basic Setup/Basic Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Medkit.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Medkit.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Medkit.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Medkit.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DoorLocked.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DoorLocked.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FadePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FadePanel.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player .prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bathroom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bathroom.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Door.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GunScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GunScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PropulsorZeroG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PropulsorZeroG.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SearchInventory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SearchInventory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SearchSlot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SearchSlot.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Searchable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Searchable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Mixers/MasterMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/Mixers/MasterMixer.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Mixers/SFX.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/Mixers/SFX.mixer" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +38,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/PlayerCollision.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Graviflux/Assets/TransitionScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TransitionScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -82,6 +68,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PropulsorZeroG.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/TransitionScript.cs" />
       </list>
     </option>
   </component>
@@ -146,7 +133,7 @@
       <workItem from="1619918865291" duration="3606000" />
       <workItem from="1620197962448" duration="17919000" />
       <workItem from="1620783657156" duration="5832000" />
-      <workItem from="1621187823023" duration="33348000" />
+      <workItem from="1621187823023" duration="34023000" />
     </task>
     <servers />
   </component>

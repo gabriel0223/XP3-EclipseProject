@@ -19679,7 +19679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83110a957a4f33747a18fef575035e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionMixer: {fileID: 0}
+  collisionMixer: {fileID: 24100000, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
 --- !u!114 &2021934033822017680
 MonoBehaviour:
   m_ObjectHideFlags: 0

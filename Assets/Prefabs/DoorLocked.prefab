@@ -1,5 +1,219 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &278225870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 278225871}
+  - component: {fileID: 278225872}
+  m_Layer: 0
+  m_Name: Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &278225871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278225870}
+  m_LocalRotation: {x: -0, y: -0, z: 0.01745245, w: 0.99984777}
+  m_LocalPosition: {x: -0.767, y: -0.151, z: -17.22}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4129452477668749884}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &278225872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278225870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a34663ca705a54eac3205e225a6d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightPresetId: 0
+  eventPresetId: 0
+  nightLayer: 0
+  color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  size: 0.5
+  coreSize: 1
+  spotAngle: 360
+  outerAngle: 15
+  maskTranslucency: 0
+  maskTranslucencyIntensity: 1
+  litMode: 0
+  applyRotation: 0
+  textureSize: 1
+  meshMode:
+    enable: 0
+    alpha: 0.5
+    shader: 3
+    materials:
+    - {fileID: 0}
+    - {fileID: 0}
+    sortingLayer:
+      name: Default
+      Order: 0
+  bumpMap:
+    intensity: 1
+    depth: 1
+  whenInsideCollider: 1
+  lightSprite: 1
+  sprite: {fileID: 21300000, guid: f789882f7facc8243a28429abcf1a513, type: 3}
+  spriteFlipX: 0
+  spriteFlipY: 0
+--- !u!1 &1245031767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1245031768}
+  - component: {fileID: 1245031769}
+  m_Layer: 0
+  m_Name: Light Sprite 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1245031768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245031767}
+  m_LocalRotation: {x: -0, y: -0, z: 0.01745245, w: 0.99984777}
+  m_LocalPosition: {x: -1.7256223, y: -0.6268883, z: -38.691772}
+  m_LocalScale: {x: 2.246909, y: 2.246909, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4129452477266824866}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1245031769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245031767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62ac029b1017974ead8b6ad01623c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nightLayer: 0
+  type: 0
+  spriteMode: 0
+  sprite: {fileID: 21300000, guid: 94639c680de092141a972e101e2f0e4f, type: 3}
+  color: {r: 0.29803923, g: 0.09019607, b: 0.09019607, a: 0.7}
+  flipX: 0
+  flipY: 0
+  lightSpriteTransform:
+    applyRotation: 1
+    scale: {x: 0.4, y: 0.4}
+    rotation: 0
+    position: {x: 0, y: 0}
+  lightSpriteShape:
+    update: 0
+  meshMode:
+    enable: 0
+    alpha: 0.5
+    shader: 0
+    materials:
+    - {fileID: 0}
+    sortingLayer:
+      name: Default
+      Order: 0
+  glowMode:
+    enable: 0
+    glowSize: 1
+    glowIterations: 1
+--- !u!1 &1375595142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1375595143}
+  - component: {fileID: 1375595144}
+  m_Layer: 0
+  m_Name: Light Sprite 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1375595143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375595142}
+  m_LocalRotation: {x: -0, y: -0, z: 0.01745245, w: 0.99984777}
+  m_LocalPosition: {x: 0.799, y: 0.539, z: -17.22}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4129452477668749884}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1375595144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375595142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62ac029b1017974ead8b6ad01623c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nightLayer: 0
+  type: 0
+  spriteMode: 0
+  sprite: {fileID: 21300000, guid: f789882f7facc8243a28429abcf1a513, type: 3}
+  color: {r: 0.24705882, g: 0.07843138, b: 0.07843138, a: 0.52}
+  flipX: 0
+  flipY: 0
+  lightSpriteTransform:
+    applyRotation: 1
+    scale: {x: 1, y: 1}
+    rotation: 0
+    position: {x: 0, y: 0}
+  lightSpriteShape:
+    update: 0
+  meshMode:
+    enable: 0
+    alpha: 0.5
+    shader: 0
+    materials:
+    - {fileID: 0}
+    sortingLayer:
+      name: Background
+      Order: 1
+  glowMode:
+    enable: 1
+    glowSize: 1
+    glowIterations: 1
 --- !u!1 &4129452476543275075
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +349,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.44505584, y: 0.44505584, z: 0.44505584}
-  m_Children: []
+  m_Children:
+  - {fileID: 1245031768}
   m_Father: {fileID: 4129452477668749884}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -176,9 +391,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingLayerID: -2136996869
+  m_SortingLayer: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ac1519bcc73917f41bf135d824e249b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -241,13 +456,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4129452477668750016}
-  m_LocalRotation: {x: -0, y: -0, z: -0.01745245, w: 0.99984777}
+  m_LocalRotation: {x: 0, y: 0, z: -0.01745245, w: 0.99984777}
   m_LocalPosition: {x: -0.13786316, y: 1.937705, z: -13.548885}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4129452477266824866}
   - {fileID: 4129452476543275074}
   - {fileID: 4129452478069428157}
+  - {fileID: 1375595143}
+  - {fileID: 278225871}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2}
@@ -284,6 +501,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockedDoorSprite: {fileID: 21300000, guid: ac1519bcc73917f41bf135d824e249b5, type: 3}
   unlockedDoorSprite: {fileID: 21300000, guid: 9e97da082cea76540b36664c575e056f, type: 3}
+  lockedDoorLightColor: {r: 0.28627452, g: 0.09019608, b: 0.09019608, a: 0.69803923}
+  unlockedDoorLightColor: {r: 0.09019608, g: 0.29803923, b: 0.14117648, a: 0.69803923}
+  doorLight: {fileID: 1245031769}
   doorState: 1
   locked: 1
 --- !u!1 &4129452478069428290
