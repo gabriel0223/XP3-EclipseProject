@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class SearchableItem
@@ -27,6 +28,7 @@ public class Searchable : MonoBehaviour
     public SearchableType searchableType;
     public SearchInventory searchInventory;
     public string name;
+    [HideInInspector] public string id; 
     public bool locked;
     public SearchableState searchableState;
     public List<SearchableItem> items = new List<SearchableItem>();
@@ -36,12 +38,18 @@ public class Searchable : MonoBehaviour
         playerInteraction = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>();
         searchableState = SearchableState.Closed;
         anim = GetComponent<Animator>();
+        
+        id = SceneManager.GetActiveScene().name + gameObject.name + Math.Sqrt(transform.position.magnitude) + transform.rotation;
+        
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (LevelManager.saveFile.KeyExists(id))
+        {
+            items = LevelManager.saveFile.Load<List<SearchableItem>>(id);
+        } 
     }
 
     // Update is called once per frame
@@ -83,6 +91,8 @@ public class Searchable : MonoBehaviour
         }
         
         searchableState = SearchableState.Closed;
+        LevelManager.saveFile.Save(id, items);
+        LevelManager.saveFile.Sync();
     }
     
     private void OnTriggerEnter2D(Collider2D other)

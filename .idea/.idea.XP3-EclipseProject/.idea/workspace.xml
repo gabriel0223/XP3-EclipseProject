@@ -22,11 +22,21 @@
     <list default="true" id="9b1a2590-f641-4fbd-ac70-cf6b65f5d7c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DoorLocked.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DoorLocked.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FadePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FadePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player .prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FunkyCode/SmartLighting2D/Scripts/Glow/LinearBlur.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FunkyCode/SmartLighting2D/Scripts/Glow/LinearBlur.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Medkit Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Medkit Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bathroom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bathroom.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AmmoBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AmmoBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Door.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactive.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelLoader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SearchSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SearchSlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Searchable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Searchable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Slot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,31 +47,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/PlayerCollision.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Graviflux/Assets/TransitionScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TransitionScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveData.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Gun.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AmmoBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PreventDeselectionGroup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interactive.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryNavigation.cs" />
         <option value="$PROJECT_DIR$/Assets/Medkit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TerminalFiles.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Slot.cs" />
         <option value="$PROJECT_DIR$/Assets/SearchSlot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GunScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/HealthBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/SearchInventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Searchable.cs" />
         <option value="$PROJECT_DIR$/Assets/AmbiencePlayer.cs" />
@@ -69,6 +73,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PropulsorZeroG.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/TransitionScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SaveData.cs" />
+        <option value="$PROJECT_DIR$/Assets/FunkyCode/SmartLighting2D/Scripts/Glow/LinearBlur.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HealthBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interactive.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AmmoBox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Searchable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SearchSlot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Door.cs" />
       </list>
     </option>
   </component>
@@ -133,7 +149,7 @@
       <workItem from="1619918865291" duration="3606000" />
       <workItem from="1620197962448" duration="17919000" />
       <workItem from="1620783657156" duration="5832000" />
-      <workItem from="1621187823023" duration="34023000" />
+      <workItem from="1621187823023" duration="57162000" />
     </task>
     <servers />
   </component>

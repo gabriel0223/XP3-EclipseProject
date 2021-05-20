@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Interactive : MonoBehaviour
@@ -20,6 +21,7 @@ public class Interactive : MonoBehaviour
     public Document document;
 
     [Header("ITEM VARIABLES")] 
+    [HideInInspector] public string id;
     private Inventory inventory;
     public GameObject itemPanel;
     public InventoryItem item;
@@ -40,17 +42,15 @@ public class Interactive : MonoBehaviour
         if (dialoguePlayer != null)
             dialoguePlayerScript = dialoguePlayer.GetComponent<DialoguePlayer>();
         
+        id = SceneManager.GetActiveScene().name + gameObject.name + Math.Sqrt(transform.position.magnitude) + transform.rotation;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        if (item != null)
+        if (LevelManager.saveFile.KeyExists(id))
         {
-            if (GameManager.itemsCollected.ContainsKey(item))
-            {
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
         }
     }
 
@@ -91,6 +91,8 @@ public class Interactive : MonoBehaviour
                 itemPanel.GetComponent<ItemPanel>().OpenItemPanel(item);
             
             GameManager.instance.AddItemToInventory(item);
+            LevelManager.saveFile.Save(id, "taken");
+            LevelManager.saveFile.Sync();
             Destroy(gameObject);
         }
 

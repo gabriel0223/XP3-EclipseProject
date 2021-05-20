@@ -156,13 +156,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ReloadInventory()
+    public void ReloadInventory(Slot[] slots)
     {
-        for (int i = 0; i < currentItems.Count; i++)
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        
+        for (int i = 0; i < slots.Length; i++)
         {
-            inventory.slots[i].GetComponent<Slot>().item = currentItems[i];
-            inventory.slots[i].transform.GetChild(0).gameObject.SetActive(true); //enable icon
-            inventory.isFull[i] = true;
+            inventory.slots[i].GetComponent<Slot>().item = slots[i].item;
+            inventory.slots[i].GetComponent<Slot>().itemQuantity = slots[i].itemQuantity;
+            Debug.Log("ITEM ADDED");
+            //inventory.slots[i].GetComponent<Slot>().item = currentItems[i];
+            
+            //inventory.slots[i].GetComponent<Slot>().itemQuantity = currentItems[i]
+            
+            //inventory.slots[i].transform.GetChild(0).gameObject.SetActive(true); //enable icon
+            //inventory.isFull[i] = true;
         }
     }
 

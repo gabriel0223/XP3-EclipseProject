@@ -18,7 +18,7 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(GameManager.playerHealth);
+        //Debug.Log(GameManager.playerHealth);
 
         ChangeBarColor();
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
@@ -14,13 +15,14 @@ public class Door : MonoBehaviour
     public Color lockedDoorLightColor, unlockedDoorLightColor;
     public LightSprite2D doorLight;
     public DoorState doorState;
+    [HideInInspector] public string id; 
     public bool locked;
     private SpriteRenderer doorSr;
     private Animator anim;
 
     private void Awake()
     {
-        
+        id = SceneManager.GetActiveScene().name + gameObject.name + Math.Sqrt(transform.position.magnitude) + transform.rotation;
     }
 
     // Start is called before the first frame update
@@ -33,6 +35,7 @@ public class Door : MonoBehaviour
         
         doorSr = transform.GetChild(0).GetComponent<SpriteRenderer>();
         doorSr.sprite = locked ? lockedDoorSprite : unlockedDoorSprite;
+        doorLight.color = locked ? lockedDoorLightColor : unlockedDoorLightColor;
     }
 
     // Update is called once per frame
@@ -44,6 +47,8 @@ public class Door : MonoBehaviour
     public void UnlockDoor()
     {
         locked = false;
+        LevelManager.saveFile.Save(id, locked);
+        LevelManager.saveFile.Sync();
         doorSr.sprite = unlockedDoorSprite;
         doorLight.color = unlockedDoorLightColor;
     }
@@ -51,6 +56,8 @@ public class Door : MonoBehaviour
     public void LockDoor()
     {
         locked = true;
+        LevelManager.saveFile.Save(id, locked);
+        LevelManager.saveFile.Sync();
         StartCoroutine(LockWhenClosed());
     }
 

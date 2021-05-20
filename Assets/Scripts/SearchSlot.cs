@@ -113,10 +113,10 @@ public class SearchSlot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubm
             itemQuantity--;
         }
 
-        if (itemQuantity == 0)
+        if (itemQuantity <= 0)
         {
-            item = null;
             itemQuantityText.gameObject.SetActive(false);
+            item = null;
             searchInventory.currentSearchable.items.Remove(itemToBeTaken);
             searchInventory.currentSearchable.items.TrimExcess();
         }

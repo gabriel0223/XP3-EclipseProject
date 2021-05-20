@@ -50,7 +50,6 @@ public class LinearBlur {
 
    static public Sprite Blur(Sprite image, int radius, int iterations, Color color){
         color.a = 1;
-        Debug.Log(radius + " " + iterations);
         Texture2D texture = new Texture2D((int)image.rect.width * 2, (int)image.rect.height * 2);
 
         Texture2D myTexture = GetTextureFromSprite(image);

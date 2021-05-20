@@ -5,20 +5,34 @@ using System.Linq;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class AmmoBox : MonoBehaviour
 {
     private PlayerInteraction playerInteraction;
+    [HideInInspector] public string id;
     public Gun gun;
     public GunScript gunScript;
     public GameObject ammoBoxUI;
-    private SpriteRenderer weaponFlat;
+    public SpriteRenderer weaponFlat;
     public int ammo;
     private bool isClose;
-    
+
+    private void Awake()
+    {
+        id = SceneManager.GetActiveScene().name + gameObject.name + Math.Sqrt(transform.position.magnitude) + transform.rotation;
+        
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        if (LevelManager.saveFile.KeyExists(id))
+        {
+            Destroy(gameObject);
+        }
+        
         playerInteraction = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>();
         weaponFlat = ammoBoxUI.transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
@@ -66,6 +80,8 @@ public class AmmoBox : MonoBehaviour
                 g.ammoRemainder += ammo;
                 gunScript.UpdateAmmo();
                 ammoBoxUI.SetActive(false);
+                LevelManager.saveFile.Save(id, "taken");
+                LevelManager.saveFile.Sync();
                 Destroy(gameObject);
             }
         }

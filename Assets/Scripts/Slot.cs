@@ -28,6 +28,7 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
         promptText = buttomPrompt.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         itemQuantityText = GetComponentInChildren<TextMeshProUGUI>(true);
         itemPanel = inventoryNavigation.itemPanel;
+        itemIcon = GetComponentInChildren<RawImage>(true);
     }
 
     // Start is called before the first frame update
@@ -43,6 +44,15 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
     void Update()
     {
         ShowItemQuantity();
+        
+        if (item != null)
+        {
+            itemIcon.gameObject.SetActive(true);
+        }
+        else
+        {
+            itemIcon.gameObject.SetActive(false); 
+        }
     }
 
     private void ShowItemQuantity()
