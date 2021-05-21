@@ -152,7 +152,6 @@ public class LevelManager : MonoBehaviour
             {
                 door.locked = saveFile.Load<bool>(door.id); 
             }
-            
         }
     }
 

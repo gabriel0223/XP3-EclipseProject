@@ -1775,6 +1775,7 @@
           <e p="PlayerMovementHorizontal.cs" t="Include" />
           <e p="PostProcessingEffects.cs" t="Include" />
           <e p="PreventDeselectionGroup.cs" t="Include" />
+          <e p="ProgressBar.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
           <e p="Propulsor.cs" t="Include" />
           <e p="PropulsorZeroG.cs" t="Include" />

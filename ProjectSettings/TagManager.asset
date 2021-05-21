@@ -11,6 +11,7 @@ TagManager:
   - SideDoor
   - ZDoor
   - ParticleSystem
+  - Repairable
   layers:
   - Default
   - TransparentFX
