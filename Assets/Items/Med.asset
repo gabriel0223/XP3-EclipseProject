@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f0bdd6a5e84b94caa4faa7b17589fb, type: 3}
+  m_Name: Med
+  m_EditorClassIdentifier: 
+  itemType: 1
+  consumableAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8447365876478473593, guid: 194a74f9e43db4140be96ab982e15ea5, type: 3}
+        m_TargetAssemblyTypeName: Medkit, Assembly-CSharp
+        m_MethodName: IncreasePlayerHealth
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 25
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  forWhichGun: {fileID: 0}
+  itemImage: {fileID: 0}
+  itemIcon: {fileID: 2800000, guid: f1cce698595e05246ab3da4b7eae2375, type: 3}
+  itemName: MEDKIT
+  text: 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -19,7 +20,7 @@ public class SearchSlot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubm
     public GameObject buttomPrompt;
     private TextMeshProUGUI promptText;
     public int itemQuantity;
-    private TextMeshProUGUI itemQuantityText;
+    public TextMeshProUGUI itemQuantityText;
 
     private void Awake()
     {
@@ -42,29 +43,34 @@ public class SearchSlot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubm
     // Update is called once per frame
     void Update()
     {
-        if (item != null)
-        {
-            itemIcon.texture = item.itemIcon;
-        }
-        else
-        {
-            itemIcon.texture = null;
-        }
+        // if (item != null)
+        // {
+        //     itemIcon.texture = item.itemIcon;
+        // }
+        // else
+        // {
+        //     itemIcon.texture = null;
+        // }
 
         ShowItemQuantity();
     }
 
     private void ShowItemQuantity()
     {
-        if (itemQuantity > 1)
-        {
-            itemQuantityText.gameObject.SetActive(true);
-            itemQuantityText.SetText(itemQuantity.ToString());
-        }
-        else
-        {
-            itemQuantityText.gameObject.SetActive(false);
-        }
+        // if (itemQuantity > 1)
+        // {
+        //     itemQuantityText.SetText(itemQuantity.ToString());
+        // }
+
+        // if (itemQuantity > 1)
+        // {
+        //     itemQuantityText.gameObject.SetActive(true);
+        //     itemQuantityText.SetText(itemQuantity.ToString());
+        // }
+        // else
+        // {
+        //     itemQuantityText.gameObject.SetActive(false);
+        // }
     }
 
     public void OnDeselect(BaseEventData eventData)
@@ -101,10 +107,6 @@ public class SearchSlot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubm
     {
         var itemToBeTaken = searchInventory.currentSearchable.items.Find(i => i.item == item);
 
-        buttomPrompt.SetActive(false);
-        SetIcon(false);
-        itemName.SetText("");
-
         var timesToAdd = itemQuantity;
         for (int i = 0; i < timesToAdd; i++)
         {
@@ -115,41 +117,51 @@ public class SearchSlot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubm
 
         if (itemQuantity <= 0)
         {
+            buttomPrompt.SetActive(false);
+            SetIcon(false);
+            itemName.SetText("");
             itemQuantityText.gameObject.SetActive(false);
             item = null;
             searchInventory.currentSearchable.items.Remove(itemToBeTaken);
             searchInventory.currentSearchable.items.TrimExcess();
         }
+        else
+        {
+            itemQuantityText.SetText(itemQuantity.ToString());
+        }
     }
 
     public void SetIcon(bool value)
     {
+        if (item != null)
+            itemIcon.texture = item.itemIcon;
+        
         itemIcon.gameObject.SetActive(value);
     }
 
-    public void InteractWithItem()
-    {
-        switch (item.itemType)
-        {
-            case InventoryItem.ItemType.Examinable:
-                itemPanel.OpenItemPanel(item, slotIndex);
-                break;
-            case InventoryItem.ItemType.Consumable:
-                item.consumableAction.Invoke();
-
-                if (itemQuantity == 1)
-                {
-                    GameManager.instance.RemoveItemFromInventory(item); 
-                    buttomPrompt.SetActive(false);
-                }
-                else
-                {
-                    itemQuantity--;
-                }
-                
-                break;
-        }
-    }
+    // public void InteractWithItem()
+    // {
+    //     switch (item.itemType)
+    //     {
+    //         case InventoryItem.ItemType.Examinable:
+    //             itemPanel.OpenItemPanel(item, slotIndex);
+    //             break;
+    //         case InventoryItem.ItemType.Consumable:
+    //             item.consumableAction.Invoke();
+    //
+    //             if (itemQuantity == 1)
+    //             {
+    //                 GameManager.instance.RemoveItemFromInventory(item); 
+    //                 buttomPrompt.SetActive(false);
+    //             }
+    //             else
+    //             {
+    //                 itemQuantity--;
+    //             }
+    //             
+    //             break;
+    //     }
+    // }
 
     public void OnPointerClick(PointerEventData eventData)
     {

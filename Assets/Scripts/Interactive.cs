@@ -87,8 +87,8 @@ public class Interactive : MonoBehaviour
 
         if (item != null)
         {
-            if (item.itemType == InventoryItem.ItemType.Examinable)
-                itemPanel.GetComponent<ItemPanel>().OpenItemPanel(item);
+            // if (item.itemType == InventoryItem.ItemType.Examinable)
+            //     itemPanel.GetComponent<ItemPanel>().OpenItemPanel(item);
             
             GameManager.instance.AddItemToInventory(item);
             LevelManager.saveFile.Save(id, "taken");

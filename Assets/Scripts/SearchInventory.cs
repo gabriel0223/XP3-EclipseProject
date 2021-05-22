@@ -41,6 +41,25 @@ public class SearchInventory : MonoBehaviour
         inventoryTitle.SetText(currentSearchable.name);
         gameObject.SetActive(true);
         AddItemsToSearch();
+
+        foreach (var slot in slots)
+        {
+            var slotScript = slot.GetComponent<SearchSlot>();
+            
+            if (slotScript.item == null)
+            {
+                slotScript.itemQuantity = 0;
+                slotScript.itemQuantityText.gameObject.SetActive(false);
+            }
+            else
+            {
+                if (slotScript.itemQuantity < 2) continue;
+                
+                slotScript.itemQuantityText.SetText(slotScript.itemQuantity.ToString());
+                slotScript.itemQuantityText.gameObject.SetActive(true);
+            }
+        }
+        
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(slots[0].gameObject);
     }

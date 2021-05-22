@@ -19609,11 +19609,11 @@ Transform:
   m_LocalPosition: {x: -5.22, y: -0.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2021934034933379645}
   - {fileID: 20382032220532210}
   - {fileID: 2021934035564791917}
   - {fileID: 2021934035203619262}
   - {fileID: 2021934034133484654}
-  - {fileID: 2021934034933379645}
   - {fileID: 2021934034268510646}
   - {fileID: 2021934035272825209}
   - {fileID: 2021934034407763120}
@@ -19771,8 +19771,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 0
+  canRepair: 0
   keyPressIcon: {fileID: 2021934035203619256}
+  keyHoldIcon: {fileID: 0}
   interacting: 0
+  repairBar: {fileID: 0}
+  objectBeingRepaired: {fileID: 0}
 --- !u!114 &2021934033822017682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20381,7 +20385,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2021934033822017694}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2021934034133484655
 MonoBehaviour:
@@ -21234,7 +21238,7 @@ Transform:
   - {fileID: 2021934035818601498}
   - {fileID: 2021934034709134973}
   m_Father: {fileID: 2021934033822017694}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2021934034933379644
 MonoBehaviour:
@@ -26192,7 +26196,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children: []
   m_Father: {fileID: 2021934033822017694}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2021934035203619263
 SpriteRenderer:
@@ -31793,7 +31797,7 @@ Transform:
   - {fileID: 4372294756830412630}
   - {fileID: 2063784246642142220}
   m_Father: {fileID: 2021934033822017694}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6714775762655955458
 SpriteRenderer:
@@ -31855,7 +31859,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2064694444937599200, guid: 576a84ab5caa9ee4d85809193f683699, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2064694444937599200, guid: 576a84ab5caa9ee4d85809193f683699, type: 3}
       propertyPath: m_LocalPosition.x

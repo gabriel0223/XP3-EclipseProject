@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public bool interactingUI;
     public Inventory inventory;
     public static float playerHealth = 5f;
+    public static int parts;
     private VolumeProfile volume;
 
     public static List<InventoryItem> currentItems = new List<InventoryItem>();
@@ -23,8 +24,6 @@ public class GameManager : MonoBehaviour
     
     public static List<Gun> guns = new List<Gun>();
     public Gun[] firstGuns;
-
-    //public int PistolAmmo;
 
     // Start is called before the first frame update
     void Awake()
@@ -69,13 +68,20 @@ public class GameManager : MonoBehaviour
 
     public void AddItemToInventory(InventoryItem item)
     {
-        if (item.itemType == InventoryItem.ItemType.Examinable)
+        switch (item.itemType)
         {
-            AddExaminableItem(item);
-        }
-        else
-        {
-            AddConsumableItem(item); 
+            case InventoryItem.ItemType.Examinable:
+                AddExaminableItem(item);
+                break;
+            case InventoryItem.ItemType.Consumable:
+                AddConsumableItem(item);
+                break;
+            case InventoryItem.ItemType.Ammo:
+                AddAmmo(item);
+                break;
+            case InventoryItem.ItemType.Resource:
+                parts++;
+                break;
         }
     }
 
@@ -124,6 +130,18 @@ public class GameManager : MonoBehaviour
         }
     }
     
+    public void AddAmmo(InventoryItem item)
+    {
+        var gun = guns.Find(g => item.forWhichGun.name.Equals(g.name));
+        
+        if (gun != null)
+        {
+            AudioManager.instance.PlayRandomBetweenSounds(new []{"AmmoPickup1", "AmmoPickup2", "AmmoPickup3"});
+            gun.ammoRemainder++;
+            LevelManager.instance.gunScript.UpdateAmmo();
+        }
+    }
+    
     public void RemoveItemFromInventory(InventoryItem item)
     {
         for (int i = 0; i < inventory.slots.Length; i++)
@@ -154,6 +172,11 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void AddAmmo(Gun gun, int ammoQuantity)
+    {
+        
     }
 
     public void ReloadInventory(Slot[] slots)

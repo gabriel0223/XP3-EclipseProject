@@ -978,6 +978,7 @@
             <e p="CameraFilterPack_Vision_Warp2.cs" t="Include" />
           </e>
         </e>
+        <e p="ConsumableItem.cs" t="Include" />
         <e p="FunkyCode" t="Include">
           <e p="Demos - SmartLighting2D" t="Include">
             <e p="Basic Scenes" t="Include">
@@ -1482,6 +1483,11 @@
               </e>
             </e>
           </e>
+        </e>
+        <e p="Items" t="Include">
+          <e p="ItemAbstract.cs" t="Include" />
+          <e p="ItemAmmo.cs" t="Include" />
+          <e p="ItemPart.cs" t="Include" />
         </e>
         <e p="NavMeshPlus-master" t="Include">
           <e p="NavMeshComponents" t="Include">

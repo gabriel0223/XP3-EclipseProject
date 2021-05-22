@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     static Vector3 playerPosition;
     private static Quaternion playerRotation;
     private static Vector2 playerVelocity;
-    private GunScript gunScript;
+    [HideInInspector] public GunScript gunScript;
     private static int ammo;
     private static int ammoRemainder;
     private static int currentGunIndex;

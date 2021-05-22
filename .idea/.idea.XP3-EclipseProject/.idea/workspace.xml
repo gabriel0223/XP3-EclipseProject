@@ -22,14 +22,18 @@
     <list default="true" id="9b1a2590-f641-4fbd-ac70-cf6b65f5d7c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Medkit.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Medkit.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player .prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactive.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventoryItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventoryItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SearchInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SearchInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SearchSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SearchSlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +45,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/SerializationManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Items/ItemPart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Graviflux/Assets/TransitionScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Items/ItemAmmo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Items/ItemAbstract.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -50,7 +57,6 @@
         <option value="$PROJECT_DIR$/Assets/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PreventDeselectionGroup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InventoryItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryNavigation.cs" />
         <option value="$PROJECT_DIR$/Assets/Medkit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TerminalFiles.cs" />
@@ -70,17 +76,23 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SaveData.cs" />
         <option value="$PROJECT_DIR$/Assets/FunkyCode/SmartLighting2D/Scripts/Glow/LinearBlur.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HealthBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interactive.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AmmoBox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Searchable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Slot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SearchSlot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/Repairable.cs" />
         <option value="$PROJECT_DIR$/Assets/ProgressBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interactive.cs" />
+        <option value="$PROJECT_DIR$/Assets/ConsumableItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Items/ItemPart.cs" />
+        <option value="$PROJECT_DIR$/Assets/Items/ItemAmmo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Items/ItemAbstract.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventoryItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Searchable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SearchSlot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SearchInventory.cs" />
       </list>
     </option>
   </component>
@@ -145,7 +157,8 @@
       <workItem from="1619918865291" duration="3606000" />
       <workItem from="1620197962448" duration="17919000" />
       <workItem from="1620783657156" duration="5832000" />
-      <workItem from="1621187823023" duration="61257000" />
+      <workItem from="1621187823023" duration="61264000" />
+      <workItem from="1621617235122" duration="21447000" />
     </task>
     <servers />
   </component>
@@ -170,6 +183,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1621646042123">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621646042123" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1620851321605">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

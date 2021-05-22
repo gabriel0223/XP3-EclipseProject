@@ -8,11 +8,12 @@ public class InventoryItem : ScriptableObject
 {
     public enum ItemType
     {
-        Examinable, Consumable 
+        Examinable, Consumable, Resource, Ammo 
     }
 
     public ItemType itemType;
     public UnityEvent consumableAction;
+    public Gun forWhichGun;
     public Texture itemImage;
     public Texture itemIcon;
     public string itemName;
