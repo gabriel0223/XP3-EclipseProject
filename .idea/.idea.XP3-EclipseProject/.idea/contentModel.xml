@@ -978,6 +978,7 @@
             <e p="CameraFilterPack_Vision_Warp2.cs" t="Include" />
           </e>
         </e>
+        <e p="CameraFollow.cs" t="Include" />
         <e p="ConsumableItem.cs" t="Include" />
         <e p="FunkyCode" t="Include">
           <e p="Demos - SmartLighting2D" t="Include">

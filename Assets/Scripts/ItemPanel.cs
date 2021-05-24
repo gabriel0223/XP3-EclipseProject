@@ -9,7 +9,7 @@ public class ItemPanel : MonoBehaviour
     private PlayerInteraction playerInteractionScript;
     private bool examining;
     public GameObject inventoryGameObject;
-    private Inventory inventory;
+    public Inventory inventory;
     private int itemSlotIndex;
 
     // Start is called before the first frame update
@@ -17,9 +17,6 @@ public class ItemPanel : MonoBehaviour
     {
         playerInteractionScript = GameObject.FindGameObjectWithTag("Player")
             .GetComponent<PlayerInteraction>();
-        inventory = GameObject.FindGameObjectWithTag("Player")
-            .GetComponent<Inventory>();
-        
     }
 
     // Update is called once per frame
@@ -42,15 +39,7 @@ public class ItemPanel : MonoBehaviour
         
         Time.timeScale = 0;
         GameManager.instance.blockPlayerMovement = true;
-        gameObject.SetActive(true);
-        gameObject.GetComponentInChildren<RawImage>().texture = item.itemImage;
-        GameManager.instance.ActivateBlur();
-    }
-    
-    public void OpenItemPanel(InventoryItem item)
-    {
-        Time.timeScale = 0;
-        GameManager.instance.blockPlayerMovement = true;
+        GameManager.instance.interactingUI = true;
         gameObject.SetActive(true);
         gameObject.GetComponentInChildren<RawImage>().texture = item.itemImage;
         GameManager.instance.ActivateBlur();
@@ -67,6 +56,7 @@ public class ItemPanel : MonoBehaviour
         GameManager.instance.DisableBlur();
         playerInteractionScript.interacting = false;
         GameManager.instance.blockPlayerMovement = false;
+        GameManager.instance.interactingUI = false;
         
         if (examining)
         {

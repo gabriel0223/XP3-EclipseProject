@@ -30,6 +30,6 @@ MonoBehaviour:
         m_CallState: 2
   forWhichGun: {fileID: 0}
   itemImage: {fileID: 0}
-  itemIcon: {fileID: 2800000, guid: f1cce698595e05246ab3da4b7eae2375, type: 3}
+  itemIcon: {fileID: 2800000, guid: 23799aa7fa3a283428a718f930362215, type: 3}
   itemName: MEDKIT
   text: 

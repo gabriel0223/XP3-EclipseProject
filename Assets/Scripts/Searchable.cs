@@ -19,7 +19,7 @@ public class Searchable : MonoBehaviour
 
     public enum SearchableType
     {
-        Cabinet, Crate
+        Cabinet, Chest
     }
 
     [HideInInspector] public bool isClose;
@@ -55,7 +55,7 @@ public class Searchable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isClose && Input.GetKeyDown(KeyCode.F))
+        if (isClose && !GameManager.instance.interactingUI && Input.GetKeyDown(KeyCode.F))
         {
             if (searchableState == SearchableState.Open) return;
             Search();
@@ -74,6 +74,9 @@ public class Searchable : MonoBehaviour
             case SearchableType.Cabinet:
                 AudioManager.instance.Play("ArmarioAbrir");
                 break;
+            case SearchableType.Chest:
+                AudioManager.instance.Play("BauAbrir");
+                break;
         }
         
         searchableState = SearchableState.Open;
@@ -88,6 +91,9 @@ public class Searchable : MonoBehaviour
             case SearchableType.Cabinet:
                 AudioManager.instance.Play("ArmarioFechar");
                 break;
+             case SearchableType.Chest:
+                 AudioManager.instance.Play("BauFechar");
+                 break;
         }
         
         searchableState = SearchableState.Closed;

@@ -18,6 +18,6 @@ MonoBehaviour:
       m_Calls: []
   forWhichGun: {fileID: 0}
   itemImage: {fileID: 0}
-  itemIcon: {fileID: 2800000, guid: cc43aff4d482e9c4285c95e25c67ed39, type: 3}
-  itemName: "PE\xC7AS"
+  itemIcon: {fileID: 2800000, guid: c5b975f3052c3f548badaf877d758245, type: 3}
+  itemName: "PE\xC7AS DE REPOSI\xC7\xC3O"
   text: 

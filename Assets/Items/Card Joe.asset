@@ -10,9 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99f0bdd6a5e84b94caa4faa7b17589fb, type: 3}
-  m_Name: Card Katia
+  m_Name: Card Joe
   m_EditorClassIdentifier: 
-  itemImage: {fileID: 2800000, guid: 4f138200a19ab764a951cb3d014e6e70, type: 3}
-  itemIcon: {fileID: 2800000, guid: ab621ddd8fea4904b8814590a19b95ab, type: 3}
-  itemName: Chave de acesso
-  text: "Um cart\xE3o de acesso. Pertencia a Katia Hopkins."
+  itemType: 0
+  consumableAction:
+    m_PersistentCalls:
+      m_Calls: []
+  forWhichGun: {fileID: 0}
+  itemImage: {fileID: 2800000, guid: 01904b731c9d39944893dc13610d376f, type: 3}
+  itemIcon: {fileID: 2800000, guid: 713113ecd13d3a741a7495d066649b9f, type: 3}
+  itemName: "CART\xC3O DE ACESSO"
+  text: "Meu cart\xE3o de acesso."

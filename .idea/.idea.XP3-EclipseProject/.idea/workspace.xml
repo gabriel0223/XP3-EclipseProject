@@ -22,18 +22,58 @@
     <list default="true" id="9b1a2590-f641-4fbd-ac70-cf6b65f5d7c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Medkit.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Medkit.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/Walls/floor1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/Walls/floor1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/Walls/floor2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/Walls/floor2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/Walls/floor3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/Walls/floor3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/Walls/plateSign1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/Walls/plateSign1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/Walls/plateSign2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/Walls/plateSign2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/Walls/roof.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/Walls/roof.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/Walls/wall_back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/Walls/wall_back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/Walls/wall_side.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/Walls/wall_side.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_cable1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_cable1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_cable2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_cable2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_cable3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_cable3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_cable4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_cable4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_cable5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_cable5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_cable6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_cable6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_pipe1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_pipe1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_pipe2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_pipe2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_pipe3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_pipe3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable8.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationCable8.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationPipe1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationPipe1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationPipe2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationPipe2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationPipe3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/cables_pipes_front/front_ventilationPipe3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Player/ArmPistol.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Player/ArmPistol.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Player/playerBody.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Player/playerBody.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Chests/chest_background_back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Chests/chest_background_back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Chests/chest_background_green.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Chests/chest_background_green.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Chests/chest_background_red.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Chests/chest_background_red.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Chests/chest_side_back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Chests/chest_side_back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Chests/chest_side_green.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Chests/chest_side_green.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Chests/chest_side_red.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Chests/chest_side_red.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Doors/door_background_back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Doors/door_background_back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Doors/door_background_green.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Doors/door_background_green.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Non-Interactable/bedroom.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Non-Interactable/bedroom.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Non-Interactable/camera_back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Non-Interactable/camera_back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Non-Interactable/camera_front.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Non-Interactable/camera_front.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Ammo Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Ammo Pistol.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Card Katia.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Card Katia.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Med.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Med.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Part.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Part.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player .prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Canvas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactive.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventoryItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventoryItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SearchInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SearchInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SearchSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SearchSlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Searchable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Searchable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +89,7 @@
     <setting file="file://$PROJECT_DIR$/../Graviflux/Assets/TransitionScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Items/ItemAmmo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Items/ItemAbstract.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -56,7 +97,6 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PreventDeselectionGroup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ItemPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryNavigation.cs" />
         <option value="$PROJECT_DIR$/Assets/Medkit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TerminalFiles.cs" />
@@ -90,9 +130,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Slot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Searchable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SearchSlot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SearchInventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/CameraFollow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SearchSlot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ItemPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Searchable.cs" />
       </list>
     </option>
   </component>
@@ -159,6 +201,7 @@
       <workItem from="1620783657156" duration="5832000" />
       <workItem from="1621187823023" duration="61264000" />
       <workItem from="1621617235122" duration="22195000" />
+      <workItem from="1621796435609" duration="5649000" />
     </task>
     <servers />
   </component>

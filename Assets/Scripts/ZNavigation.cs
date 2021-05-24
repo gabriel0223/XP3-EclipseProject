@@ -20,7 +20,7 @@ public class ZNavigation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isClose && door.doorState == Door.DoorState.Open)
+        if (isClose && !GameManager.instance.interactingUI && door.doorState == Door.DoorState.Open)
         {
             if (Input.GetKeyDown(KeyCode.F))
             {

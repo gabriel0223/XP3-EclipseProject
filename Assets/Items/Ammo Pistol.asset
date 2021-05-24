@@ -18,6 +18,6 @@ MonoBehaviour:
       m_Calls: []
   forWhichGun: {fileID: 11400000, guid: c1ad05a7794f07348a08506a9293cffa, type: 2}
   itemImage: {fileID: 0}
-  itemIcon: {fileID: 2800000, guid: 6da91491aec326840abf400e24ca8c7d, type: 3}
+  itemIcon: {fileID: 2800000, guid: 7615517af95dd594596d0d37e7cdbfda, type: 3}
   itemName: "MUNI\xC7\xC3O DE PISTOLA"
   text: 
