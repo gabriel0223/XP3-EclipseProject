@@ -95,6 +95,9 @@ public class Slot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubmitHand
                 buttomPrompt.SetActive(true);
                 promptText.SetText("Usar");
                 break;
+            case InventoryItem.ItemType.Resource:
+                buttomPrompt.SetActive(false);
+                break;
         }
 
         selected = true;

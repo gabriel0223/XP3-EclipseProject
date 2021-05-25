@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
                 AddAmmo(item);
                 break;
             case InventoryItem.ItemType.Resource:
-                parts++;
+                AddConsumableItem(item);
                 break;
         }
     }

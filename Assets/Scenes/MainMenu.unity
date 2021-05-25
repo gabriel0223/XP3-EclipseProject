@@ -896,7 +896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6427924192261330536, guid: 84267882862cc98419dde77fa56570b5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -19.76001
+      value: -19.760254
       objectReference: {fileID: 0}
     - target: {fileID: 6427924192261330536, guid: 84267882862cc98419dde77fa56570b5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -917,10 +917,6 @@ PrefabInstance:
     - target: {fileID: 6427924192261330537, guid: 84267882862cc98419dde77fa56570b5, type: 3}
       propertyPath: m_Name
       value: FadePanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 6427924192261330538, guid: 84267882862cc98419dde77fa56570b5, type: 3}
-      propertyPath: m_Color.a
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84267882862cc98419dde77fa56570b5, type: 3}

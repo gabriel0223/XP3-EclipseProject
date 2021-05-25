@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Splashscreen.unity
+    guid: f766b1b2300df0a48a44211c38e0f290
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 312d27a5b19c0ab4397e9ef419176b35
   - enabled: 1
-    path: Assets/Scenes/Prototype.unity
+    path: Assets/Scenes/Bedroom.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Bathroom.unity
-    guid: 9d6b70478e386864b9055b77ee0a00b4
+    path: Assets/Scenes/Corridor.unity
+    guid: 4266825c35a84054aafa78e53ca8e240
   m_configObjects: {}

@@ -46,8 +46,11 @@ public class LevelManager : MonoBehaviour
     
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        inventory = GameObject.FindGameObjectWithTag("Canvas").transform.Find("Inventory").GetComponentsInChildren<Slot>(true);
         _fadePanel = GameObject.FindGameObjectWithTag("Canvas").transform.Find("FadePanel").GetComponent<Animator>();
+
+        if (SceneManager.GetActiveScene().buildIndex < 2) return;
+        
+        inventory = GameObject.FindGameObjectWithTag("Canvas").transform.Find("Inventory").GetComponentsInChildren<Slot>(true);
         gunScript = GameObject.FindGameObjectWithTag("Player").transform.Find("GunPivotPoint")
             .GetComponent<GunScript>();
         
@@ -64,6 +67,10 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
         // Debug.Log(saveFile.GetKeys()[0]);
     }
 
@@ -75,7 +82,8 @@ public class LevelManager : MonoBehaviour
     public IEnumerator EnterDoor(ZDoor door)
     {
         _fadePanel.SetTrigger("Fade");
-        yield return new WaitForSeconds(_fadePanel.GetCurrentAnimatorStateInfo(0).length);
+        //yield return new WaitForSeconds(_fadePanel.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(1);
         GetData();
         currentZDoor = door;
         Debug.Log(currentZDoor.nextDoor.doorID);

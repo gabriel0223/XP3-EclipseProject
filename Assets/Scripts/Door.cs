@@ -13,7 +13,8 @@ public class Door : MonoBehaviour
     
     public Sprite lockedDoorSprite, unlockedDoorSprite;
     public Color lockedDoorLightColor, unlockedDoorLightColor;
-    public LightSprite2D doorLight;
+    public LightSprite2D[] doorlights;
+    //public LightSprite2D doorLight;
     public DoorState doorState;
     [HideInInspector] public string id; 
     public bool locked;
@@ -35,7 +36,11 @@ public class Door : MonoBehaviour
         
         doorSr = transform.GetChild(0).GetComponent<SpriteRenderer>();
         doorSr.sprite = locked ? lockedDoorSprite : unlockedDoorSprite;
-        doorLight.color = locked ? lockedDoorLightColor : unlockedDoorLightColor;
+
+        foreach (var light in doorlights)
+        {
+            light.color = locked ? lockedDoorLightColor : unlockedDoorLightColor;
+        }
     }
 
     // Update is called once per frame
@@ -50,7 +55,11 @@ public class Door : MonoBehaviour
         LevelManager.saveFile.Save(id, locked);
         LevelManager.saveFile.Sync();
         doorSr.sprite = unlockedDoorSprite;
-        doorLight.color = unlockedDoorLightColor;
+        
+        foreach (var light in doorlights)
+        {
+            light.color = unlockedDoorLightColor;
+        }
     }
     
     public void LockDoor()
@@ -107,7 +116,13 @@ public class Door : MonoBehaviour
         }
         
         doorSr.sprite = lockedDoorSprite;
-        doorLight.color = lockedDoorLightColor;
+
+        foreach (var light in doorlights)
+        {
+            light.color = lockedDoorLightColor;
+        }
+        
+        
         AudioManager.instance.Play("PortaLadoTravar");
     }
 }
