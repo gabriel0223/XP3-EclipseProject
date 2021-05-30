@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101519926}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3333, y: 0.55137, z: 0}
-  m_LocalScale: {x: 0.21491691, y: 1.0566425, z: 1}
+  m_LocalPosition: {x: -0.361, y: 0.619, z: 0}
+  m_LocalScale: {x: 0.23855779, y: 1.1728733, z: 1.11}
   m_Children:
   - {fileID: 999063113}
   m_Father: {fileID: 2021934033822017694}
@@ -14542,6 +14542,7 @@ GameObject:
   - component: {fileID: 980125600}
   - component: {fileID: 980125599}
   - component: {fileID: 980125598}
+  - component: {fileID: 980125601}
   m_Layer: 5
   m_Name: 'Progress Bar '
   m_TagString: Untagged
@@ -14606,6 +14607,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &980125601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980125597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1684dd726124f34bb789e069957eefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barImage: {fileID: 0}
+  fillSpeed: 0.25
+  decreaseSpeed: 0.12
 --- !u!1 &999063111
 GameObject:
   m_ObjectHideFlags: 0
@@ -14744,7 +14760,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 839adabbc5de26041bac66450214a831, type: 3}
-  m_Type: 3
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
@@ -19715,7 +19731,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0509166, y: 2.6736362}
+    oldSize: {x: 1.1560084, y: 2.9410002}
     newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -19773,9 +19789,9 @@ MonoBehaviour:
   canInteract: 0
   canRepair: 0
   keyPressIcon: {fileID: 2021934035203619256}
-  keyHoldIcon: {fileID: 0}
+  keyHoldIcon: {fileID: 8566055704675957407}
   interacting: 0
-  repairBar: {fileID: 0}
+  repairBar: {fileID: 980125601}
   objectBeingRepaired: {fileID: 0}
 --- !u!114 &2021934033822017682
 MonoBehaviour:
@@ -19883,7 +19899,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0509166, y: 2.6736362}
+    oldSize: {x: 1.1560084, y: 2.9410002}
     newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -20773,7 +20789,7 @@ MonoBehaviour:
   lightPresetId: 0
   eventPresetId: 0
   nightLayer: 0
-  color: {r: 0.38041517, g: 0.38041517, b: 0.38041517, a: 1}
+  color: {r: 0.38041517, g: 0.38041517, b: 0.38041517, a: 0.3}
   size: 5
   coreSize: 1
   spotAngle: 360
@@ -20807,7 +20823,7 @@ SpriteMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021934034268510647}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -26350,7 +26366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2021934035414695714
 Transform:
   m_ObjectHideFlags: 0
@@ -31561,7 +31577,7 @@ GameObject:
   - component: {fileID: 4372294756830412630}
   - component: {fileID: 7946901028802959220}
   m_Layer: 0
-  m_Name: white triangle
+  m_Name: HoldPrompt_Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31574,13 +31590,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2915940993250696987}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.382007, y: -3.7440026, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0.02, y: 0.743, z: 0}
+  m_LocalScale: {x: 0.28318, y: 0.28318, z: 0}
   m_Children: []
   m_Father: {fileID: 20382032220532210}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &7946901028802959220
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31620,7 +31636,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: d35f0bb6b8096a946a3223e31fcd2396, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -31782,7 +31798,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &20382032220532210
 Transform:
   m_ObjectHideFlags: 0

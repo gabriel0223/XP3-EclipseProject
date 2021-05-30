@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Com.LuisPedroFonseca.ProCamera2D;
 using UnityEngine;
 
 public class CameraScript : MonoBehaviour
@@ -9,24 +11,31 @@ public class CameraScript : MonoBehaviour
     public float rotationSmoothing;
 
     public float followSmoothing;
+
+    private void Awake()
+    {
+        player = GameObject.FindWithTag("Player").transform;
+        ProCamera2D.Instance.AddCameraTarget(player);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
-        
         //Force16by9();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        // transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        
         transform.rotation = Quaternion.Slerp(transform.rotation, player.transform.rotation,
             rotationSmoothing * Time.deltaTime);
 
         //transform.position = Vector2.Lerp(transform.position, player.position, followSmoothing * Time.deltaTime);
         
-        transform.position = new Vector3(Mathf.Lerp(transform.position.x, player.position.x, followSmoothing * Time.deltaTime), 
-            Mathf.Lerp(transform.position.y, player.position.y, followSmoothing * Time.deltaTime), -10);
+        // transform.position = new Vector3(Mathf.Lerp(transform.position.x, player.position.x, followSmoothing * Time.deltaTime), 
+        //     Mathf.Lerp(transform.position.y, player.position.y, followSmoothing * Time.deltaTime), -10);
     }
     
     private void Force16by9()

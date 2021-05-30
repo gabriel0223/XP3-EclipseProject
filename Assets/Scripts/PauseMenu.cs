@@ -24,22 +24,13 @@ public class PauseMenu : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Continue();
+            GameManager.instance.Unpause();
         }
-        
     }
 
     public void QuitGame()
     {
         Application.Quit();
-    }
-    
-    public void Continue()
-    {
-        Time.timeScale = 1;
-        GameManager.instance.blockPlayerMovement = false;
-        GameManager.instance.DisableBlur();
-        gameObject.SetActive(false);
     }
 
     private void OnEnable()

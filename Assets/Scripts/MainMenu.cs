@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioMixerSnapshot noSong;
     public Transform selectionSquare;
     public GameObject[] menuSections;
 
@@ -40,6 +42,8 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log("CHAMANDO O MÉTODO CERTO");
+        noSong.TransitionTo(0.5f);
+        LevelManager.instance.StartGame();
     }
 }

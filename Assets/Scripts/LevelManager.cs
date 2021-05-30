@@ -46,6 +46,8 @@ public class LevelManager : MonoBehaviour
     
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (SceneManager.GetActiveScene().name.Equals("Intro")) return; 
+        
         _fadePanel = GameObject.FindGameObjectWithTag("Canvas").transform.Find("FadePanel").GetComponent<Animator>();
 
         if (SceneManager.GetActiveScene().buildIndex < 2) return;
@@ -128,7 +130,7 @@ public class LevelManager : MonoBehaviour
                     {
                         Debug.Log("LAST STEP");
                         player.transform.position = door.transform.position;
-                        cam.transform.position = door.transform.position;
+                        //cam.transform.position = door.transform.position;
                         break;
                     }
                 }

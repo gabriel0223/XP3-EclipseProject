@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public bool isSelectingItem;
     public bool interactingUI;
     public Inventory inventory;
-    public static float playerHealth = 5f;
+    public static float playerHealth = 50f;
     public static int parts;
     private VolumeProfile volume;
 
@@ -203,6 +203,16 @@ public class GameManager : MonoBehaviour
         blockPlayerMovement = true;
         pauseMenu.SetActive(true);
         ActivateBlur();
+        AudioListener.pause = true;
+    }
+    
+    public void Unpause()
+    {
+        Time.timeScale = 1;
+        blockPlayerMovement = false;
+        DisableBlur();
+        AudioListener.pause = false;
+        FindObjectOfType<PauseMenu>().gameObject.SetActive(false);
     }
     
     public void ActivateBlur () {

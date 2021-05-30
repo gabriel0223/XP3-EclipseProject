@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 121766489}
   - component: {fileID: 121766488}
   - component: {fileID: 121766487}
+  - component: {fileID: 121766490}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -206,6 +207,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &121766490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121766486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &209351548
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 698343399530647333, guid: 40b5bf232b8aed74aa8af9b19659b935, type: 3}
+      propertyPath: sounds.Array.data[21].mixerGroup
+      value: 
+      objectReference: {fileID: 1109020465181929532, guid: aeabe8a47130b534ba4ea89a619bce12, type: 2}
     - target: {fileID: 698343399530647338, guid: 40b5bf232b8aed74aa8af9b19659b935, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -466,8 +503,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2068761085}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+      - m_Target: {fileID: 1336735857}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
@@ -1382,6 +1419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76ee3d9103ae0d14a918ba7cc147906f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noSong: {fileID: -6596437102247543966, guid: aeabe8a47130b534ba4ea89a619bce12, type: 2}
   selectionSquare: {fileID: 1023313974}
   menuSections:
   - {fileID: 1563197258}
@@ -1690,17 +1728,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e50185b03ab2f8a448ff70c5892b708d, type: 3}
---- !u!114 &2068761085 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4325574277853123961, guid: e50185b03ab2f8a448ff70c5892b708d, type: 3}
-  m_PrefabInstance: {fileID: 2068761084}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577b5018f0dc55649abac1887fea9d13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4687944456043403691
 PrefabInstance:
   m_ObjectHideFlags: 0

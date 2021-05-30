@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Com.LuisPedroFonseca.ProCamera2D;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -27,49 +28,24 @@ public class PlayerCollision : MonoBehaviour
         var collisionForce = other.relativeVelocity.magnitude;
 
         Debug.Log(collisionForce);
-        PlayCollisionSound(collisionForce);
+        PlayCollisionSounds(collisionForce);
     }
 
-    void PlayCollisionSound(float collisionForce)
+    void PlayCollisionSounds(float collisionForce)
     {
         var colVol = -5 + collisionForce;
         
         collisionMixer.SetFloat("ColVol", Mathf.Clamp(colVol, -5, 5));
         collisionMixer.SetFloat("ColPitch",  Random.Range(collisionForce/14, collisionForce/10));
         collisionMixer.SetFloat("ColReverb_Reverb", collisionForce * 100);
-        //collisionMixer.SetFloat("ColLowpass_Freq", collisionForce * 500);
-        // AudioManager.instance.Play("WeakImpact1");
         AudioManager.instance.PlayRandomBetweenSounds(new []{"WeakImpact1", "WeakImpact2", "WeakImpact3"});
-        
-        
-        // switch (collisionForce)
-        // {
-        //     case float n when n >= 9:
-        //         Debug.Log("BATEU FORTE");
-        //         //AudioManager.instance.PlayRandomBetweenSounds(new []{"StrongImpact1", "StrongImpact2", "StrongImpact3"});
-        //         //AudioManager.instance.PlayRandomBetweenSounds(new []{"WeakImpact1", "WeakImpact2", "WeakImpact3"});
-        //         collisionMixer.SetFloat("ColPitch", 15);
-        //         AudioManager.instance.Play("WeakImpact1");
-        //         break;
-        //
-        //     case float n when n >= 5:
-        //         Debug.Log("BATEU MAIS OU MENOS");
-        //         //AudioManager.instance.PlayRandomBetweenSounds(new []{"MediumImpact1", "MediumImpact2", "MediumImpact3"});
-        //         //AudioManager.instance.PlayRandomBetweenSounds(new []{"WeakImpact1", "WeakImpact2", "WeakImpact3"});
-        //         AudioManager.instance.Play("WeakImpact1");
-        //         break;
-        //
-        //     case float n when n >= 1:
-        //         Debug.Log("BATEU FRACO");
-        //         //AudioManager.instance.PlayRandomBetweenSounds(new []{"WeakImpact1", "WeakImpact2", "WeakImpact3"});
-        //         
-        //         collisionMixer.SetFloat("ColPitch",  Random.Range(collisionForce/12, collisionForce/8));
-        //         AudioManager.instance.Play("WeakImpact1");
-        //         break;
-        //     default:
-        //         //Debug.Log("FRAQUÍSSIMO");
-        //         break;
-        // }
+
+        if (collisionForce > 8)
+        {
+            AudioManager.instance.PlayRandomBetweenSounds(new []{"VisorRachadura01", "VisorRachadura02, VisorRachadura03", "VisorRachadura04"});
+            //ProCamera2DShake.Instance.Shake("PistolCamShake");
+            GameManager.playerHealth -= Random.Range(collisionForce / 2, collisionForce);
+        }
 
         StartCoroutine("LockCollisionSound");
     }

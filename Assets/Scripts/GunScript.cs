@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using Com.LuisPedroFonseca.ProCamera2D;
 
 public class GunScript : MonoBehaviour
 {
@@ -142,8 +143,9 @@ public class GunScript : MonoBehaviour
 
     public void Shoot()
     {
-        AudioManager.instance.PlayRandomBetweenSounds(currentGun.shotSounds);
+        //AudioManager.instance.PlayRandomBetweenSounds(currentGun.shotSounds);
         AudioManager.instance.PlayOneShotRandomBetweenSounds(currentGun.shotSounds);
+        //ProCamera2DShake.Instance.Shake("PistolCamShake");
         Instantiate(currentGun.projectile, shotPoint.position, transform.rotation);
         currentGun.ammo--;
         UpdateAmmo();
