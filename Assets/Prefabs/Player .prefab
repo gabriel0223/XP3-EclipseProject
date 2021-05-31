@@ -19765,7 +19765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2930b9013583a0e46bbf7b52fa2e3482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jetpackForce: 550
+  jetpackForce: 450
   rotationForce: 200
   dashForce: 0
   deceleration: 5

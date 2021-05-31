@@ -20,38 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b1a2590-f641-4fbd-ac70-cf6b65f5d7c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/Ventilation/ventilationShaft.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/Ventilation/ventilationShaft.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Doors/door_piping_green.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Doors/door_piping_green.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Doors/door_piping_red.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Doors/door_piping_red.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CameraFollow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CameraFollow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ConsumableItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ConsumableItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PipeTutorial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PipeTutorial.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/Ventilation/ShaftAC.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/Ventilation/ShaftAC.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment/Ventilation/ventilationShaft_conection.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Environment/Ventilation/ventilationShaft_conection.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player .prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bedroom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bedroom.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cameras.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cameras.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Scenario Piece01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Scenario Piece01.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Corridor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Corridor.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype/Blur Camera Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype/Blur Camera Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GunScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GunScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerCollision.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Mixers/Music.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/Mixers/Music.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Splashscreen.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Splashscreen.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VentilationTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VentilationTrigger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +47,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PreventDeselectionGroup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryNavigation.cs" />
         <option value="$PROJECT_DIR$/Assets/Medkit.cs" />
@@ -122,6 +97,7 @@
         <option value="$PROJECT_DIR$/Assets/ConversationManager.cs" />
         <option value="$PROJECT_DIR$/Assets/ConversationTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/VentilationTrigger.cs" />
       </list>
     </option>
   </component>
@@ -191,6 +167,7 @@
       <workItem from="1621796435609" duration="12538000" />
       <workItem from="1621893208263" duration="20246000" />
       <workItem from="1622406423913" duration="2435000" />
+      <workItem from="1622429019749" duration="3964000" />
     </task>
     <servers />
   </component>

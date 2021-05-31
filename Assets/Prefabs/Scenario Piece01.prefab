@@ -68,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2117655885
-  m_SortingLayer: 1
+  m_SortingLayerID: 1975922113
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 326009dbcbc8e7a409ca5b5cb31aaf05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -205,7 +205,7 @@ MonoBehaviour:
   nightLayer: 0
   color: {r: 0.19215687, g: 0.19215687, b: 0.19215687, a: 1}
   size: 12
-  coreSize: 0.5
+  coreSize: 1.99
   spotAngle: 360
   outerAngle: 17
   maskTranslucency: 0
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 7341308118899114714}
   - component: {fileID: 7341308118899114725}
   - component: {fileID: 7341308118899114715}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
