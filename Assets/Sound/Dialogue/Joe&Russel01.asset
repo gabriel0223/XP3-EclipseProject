@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3f099e2043121418f3d31344e8815d, type: 3}
+  m_Name: Joe&Russel01
+  m_EditorClassIdentifier: 
+  audioSentences:
+  - audioClip: {fileID: 8300000, guid: 2cc1315c9dff6a645a222d80b0830578, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 193cf2489239da84c92ac045e420c6e3, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 65b67a8909f5de347bb8c0b2d96b22b1, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 3b73e90473289c34e875440810833456, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 537e6bdf4e8fdf04d9e4ae8ae6fe75e3, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: d0f5d530cffa25a4593d44106252fc9f, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 4a8ef8fbd0238a7499deddc910a0980a, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: eaf33a4f28f98e4408e1e16f7da6bedb, type: 3}
+    timeToPlayNext: 0

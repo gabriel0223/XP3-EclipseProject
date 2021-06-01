@@ -7,6 +7,7 @@ public class PipeTutorial : MonoBehaviour
 {
     private Rigidbody2D rb2d;
     public float impactForce;
+    private bool hitHim;
 
     private void Awake()
     {
@@ -24,5 +25,15 @@ public class PipeTutorial : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (!other.gameObject.CompareTag("Player") || hitHim) return;
+
+        hitHim = true;
+        AudioManager.instance.Play("VisorRachadura02");
+        GetComponentInChildren<TutorialTrigger>().ActivateTutorial();
+        //start conversation with Russel
     }
 }

@@ -18,7 +18,7 @@ public class Door : MonoBehaviour
     public DoorState doorState;
     [HideInInspector] public string id; 
     public bool locked;
-    private SpriteRenderer doorSr;
+    public SpriteRenderer doorSr;
     private Animator anim;
 
     private void Awake()
@@ -32,10 +32,12 @@ public class Door : MonoBehaviour
         anim = GetComponent<Animator>();
         doorState = DoorState.Closed;
 
-        if (!CompareTag("SideDoor")) return;
+        if (!CompareTag("VentDoor"))
+            doorSr = transform.GetChild(0).GetComponent<SpriteRenderer>();
         
-        doorSr = transform.GetChild(0).GetComponent<SpriteRenderer>();
         doorSr.sprite = locked ? lockedDoorSprite : unlockedDoorSprite;
+        
+        if (!CompareTag("SideDoor")) return;
 
         foreach (var light in doorlights)
         {
@@ -83,7 +85,16 @@ public class Door : MonoBehaviour
         else
         {
             anim.SetTrigger("Open");
-            AudioManager.instance.Play("PortaLadoAbrir");
+            
+            if (gameObject.name.Equals("VentilationDoor"))
+            {
+                AudioManager.instance.Play("VentAbrir");
+            }
+            else
+            {
+                AudioManager.instance.Play("PortaLadoAbrir");    
+            }
+            
             StartCoroutine(ChangeDoorState(0, anim.GetCurrentAnimatorStateInfo(0).length));
         }
         
@@ -95,7 +106,16 @@ public class Door : MonoBehaviour
             return;
         
         anim.SetTrigger("Close");
-        AudioManager.instance.Play("PortaLadoFechar");
+
+        if (gameObject.name.Equals("VentilationDoor"))
+        {
+            AudioManager.instance.Play("VentFechar");
+        }
+        else
+        {
+            AudioManager.instance.Play("PortaLadoFechar");    
+        }
+        
         StartCoroutine(ChangeDoorState(1, anim.GetCurrentAnimatorStateInfo(0).length));
     }
 

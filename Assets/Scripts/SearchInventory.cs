@@ -53,7 +53,11 @@ public class SearchInventory : MonoBehaviour
             }
             else
             {
-                if (slotScript.itemQuantity < 2) continue;
+                if (slotScript.itemQuantity < 2)
+                {
+                    slotScript.itemQuantityText.gameObject.SetActive(false);
+                    continue;
+                }
                 
                 slotScript.itemQuantityText.SetText(slotScript.itemQuantity.ToString());
                 slotScript.itemQuantityText.gameObject.SetActive(true);

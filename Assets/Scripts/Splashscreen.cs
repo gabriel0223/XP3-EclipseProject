@@ -24,7 +24,10 @@ public class Splashscreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
     
     void EndReached(UnityEngine.Video.VideoPlayer vp)

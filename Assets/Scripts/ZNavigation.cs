@@ -31,13 +31,21 @@ public class ZNavigation : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !door.locked)
         {
             isClose = true;
             keyPressIcon.SetActive(true);
         }
     }
-    
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && !door.locked)
+        {
+            isClose = true;
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

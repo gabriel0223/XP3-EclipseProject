@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 4745952745904907504}
   - component: {fileID: 4745952745904907505}
   m_Layer: 0
-  m_Name: UI Camera
+  m_Name: ParallaxCamera (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4745952745904907470
 Transform:
   m_ObjectHideFlags: 0
@@ -26,11 +26,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4745952745904907471}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.670386, y: 0.6205893, z: 0}
+  m_LocalPosition: {x: -4.7900004, y: -0.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4745952745937703573}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &4745952745904907504
 Camera:
@@ -41,7 +41,7 @@ Camera:
   m_GameObject: {fileID: 4745952745904907471}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 4
+  m_ClearFlags: 3
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -58,12 +58,12 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 1
+  orthographic: 1
+  orthographic size: 6
+  m_Depth: -2
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 32
+    m_Bits: 0
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -134,8 +134,8 @@ Transform:
   m_LocalPosition: {x: -5.2503858, y: -0.14058933, z: -78.44503}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4745952745904907470}
   - {fileID: 4745952746873044689}
+  - {fileID: 4745952745904907470}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -286,7 +286,7 @@ Transform:
   - {fileID: 4745952747617357083}
   - {fileID: 4745952746400365744}
   m_Father: {fileID: 4745952745937703573}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &4745952746873044526
 Camera:
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  rotationSmoothing: 1
+  rotationSmoothing: 2
   followSmoothing: 4
 --- !u!114 &4745952746873044691
 MonoBehaviour:
@@ -524,6 +524,13 @@ MonoBehaviour:
     LayerMask:
       serializedVersion: 2
       m_Bits: 2048
+  - ParallaxCamera: {fileID: 4745952745904907504}
+    Speed: 1
+    SpeedX: 1
+    SpeedY: 1
+    LayerMask:
+      serializedVersion: 2
+      m_Bits: 0
   ParallaxHorizontal: 1
   ParallaxVertical: 0
   ParallaxZoom: 0
@@ -686,8 +693,9 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras:
-  - {fileID: 4745952746873044526}
+  - {fileID: 4745952745904907504}
   - {fileID: 4745952746400365746}
+  - {fileID: 4745952746873044526}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2

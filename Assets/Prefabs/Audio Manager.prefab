@@ -394,6 +394,48 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
+  - name: BauAbrir
+    clip: {fileID: 8300000, guid: 369ca40f610572547afb9a13cc7c648d, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: BauFechar
+    clip: {fileID: 8300000, guid: 4be60eeb24acea642baf7a3475b721c9, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: VisorRachadura01
+    clip: {fileID: 8300000, guid: e8cf7865857fa3849846c71b465b50e4, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: VisorRachadura02
+    clip: {fileID: 8300000, guid: b6c0521ac57c7964ba78a32c7e1fae49, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: VisorRachadura03
+    clip: {fileID: 8300000, guid: b39e16c9f326ed249a7f9ff773229b4c, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: VisorRachadura04
+    clip: {fileID: 8300000, guid: cac5c80bb13f52648b735ce832c5edae, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
   source: {fileID: 0}
   masterMixer: {fileID: 24300002, guid: 0d7af997f30dcca46afea6d0a908544e, type: 2}
   musicMixer: {fileID: 24100000, guid: aeabe8a47130b534ba4ea89a619bce12, type: 2}

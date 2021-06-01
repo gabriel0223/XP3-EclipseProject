@@ -82,10 +82,14 @@ public class Inventory : MonoBehaviour
         {
             slot.transform.localScale = Vector3.one;
         }
-        
+
         if (GameManager.instance.isSelectingItem)
+        {
             selectItemText.SetActive(false);
-        
+            if (!GetComponent<PlayerInteraction>().canInteract) return;
+            GetComponent<PlayerInteraction>().keyPressIcon.SetActive(true);
+        }
+
         GameManager.instance.blockPlayerMovement = false;
         GameManager.instance.isSelectingItem = false;
         GameManager.instance.interactingUI = false;

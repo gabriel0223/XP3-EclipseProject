@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3f099e2043121418f3d31344e8815d, type: 3}
+  m_Name: ConversaTeste
+  m_EditorClassIdentifier: 
+  audioSentences:
+  - audioClip: {fileID: 8300000, guid: 707c96b61d3753c4bbdb4ae6709e971b, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: e809cdc1928e6a346a9dc13a3c97f841, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: ac8ea2b08baf37142bda9d494672befa, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 911ebffd6cef44e40b4ce85e2dcbbcf9, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 5e50dd34f33eebd468237f6efd65895e, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: e19c919a5a38b064a96666c0c086228f, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 2239d14098cb77b479ee811c63895dc5, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 3ddd1a97cc34b61418d11b52ee895926, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: cdd84212cd28aa746a2d43a41f677d0e, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 1dc354b427c2a3942af2008c221b21c6, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: ff635b6428a508d42aa00d0e1e5a8583, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 19a9e9a7f272c8a4087c8e6beafa80c9, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 14e4cae75d2d2f8459abcb8cbbb64174, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 4c1a1e0f1676e3147b2dcdb985bd2f6a, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 9357f3a44326f6d4c9c30477bafe1478, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: cd9ab7f4e29725b48b453d26de3f4704, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: e4cb847538436b344ab01689752921a3, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 88692db1ceb5c034e9de2b857af910f1, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 0570248ff69793c40923217ccb416c40, type: 3}
+    timeToPlayNext: 0

@@ -37,6 +37,7 @@ public class Interactive : MonoBehaviour
     private void Awake()
     {
         canvas = GameObject.FindGameObjectWithTag("Canvas");
+        inventoryNavigation = canvas.GetComponentInChildren<InventoryNavigation>(true);
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         
         if (dialoguePlayer != null)
@@ -51,6 +52,11 @@ public class Interactive : MonoBehaviour
         if (LevelManager.saveFile.KeyExists(id))
         {
             Destroy(gameObject);
+        }
+
+        if (requestedItem != null && transform.parent.GetComponent<Door>() != null)
+        {
+            if (!transform.parent.GetComponent<Door>().locked) Destroy(gameObject);
         }
     }
 
@@ -104,6 +110,4 @@ public class Interactive : MonoBehaviour
             inventory.OpenInventory(true);
         }
     }
-
-
 }

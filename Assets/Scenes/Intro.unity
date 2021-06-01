@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 1396224245}
   - component: {fileID: 1396224247}
   m_Layer: 0
-  m_Name: Splashscreen
+  m_Name: Video
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -382,7 +382,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396224244}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: b8f8089637013894dacd580aff19fee0, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: a99db89cffacea7418b6fee0ef378cc2, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}

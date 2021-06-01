@@ -12,9 +12,23 @@ public class PlayerInteraction : MonoBehaviour
     [HideInInspector] public bool interacting;
     public ProgressBar repairBar;
     public GameObject objectBeingRepaired;
-
+    private bool learningSomething;
     private Interactive interactiveObject;
-    
+
+    public bool LearningSomething
+    {
+        get => learningSomething;
+        
+        set
+        {
+            learningSomething = value;
+            if (value)
+            {
+                StartCoroutine(LearnSomething());
+            }
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +38,11 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (learningSomething)
+        {
+            keyPressIcon.SetActive(false);
+        }
+
         if (canInteract)
         {
             if (Input.GetKeyDown(KeyCode.F) && !GameManager.instance.blockPlayerMovement)
@@ -53,9 +72,18 @@ public class PlayerInteraction : MonoBehaviour
             }
         }
     }
+    
+    public IEnumerator LearnSomething()
+    {
+        learningSomething = true;
+        yield return new WaitForSeconds(5);
+        learningSomething = false;
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (learningSomething) return;
+        
         if (other.CompareTag("Interactive"))
         {
             canInteract = true;

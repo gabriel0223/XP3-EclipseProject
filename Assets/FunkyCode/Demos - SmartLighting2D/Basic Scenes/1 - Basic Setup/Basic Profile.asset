@@ -16,7 +16,7 @@ MonoBehaviour:
     list:
     - name: Main
       sortingLayer:
-        name: Default
+        name: OverPlayer
         Order: 0
       darknessColor: {r: 0, g: 0, b: 0, a: 0.95}
       lightingResolution: 1
