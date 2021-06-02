@@ -2170,7 +2170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3782745789988068907
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4385,7 +4385,7 @@ MonoBehaviour:
   m_margin: {x: 47.464233, y: 98.373535, z: 0, w: 2.936554}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3782745790533875072
@@ -10770,7 +10770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3353075196071109731, guid: 8d9567f2b9e32f2438dc5aed5b4e41af, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -36.54248
+      value: -36.542496
       objectReference: {fileID: 0}
     - target: {fileID: 3423362827326995520, guid: 8d9567f2b9e32f2438dc5aed5b4e41af, type: 3}
       propertyPath: m_Pivot.x

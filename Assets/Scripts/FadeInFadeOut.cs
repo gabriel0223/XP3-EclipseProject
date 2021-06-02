@@ -43,6 +43,8 @@ public class FadeInFadeOut : MonoBehaviour
     
     public IEnumerator FadeOut(float fadeDuration)
     {
+        transform.parent.parent.GetComponent<PlayerInteraction>().learningSomething = true;
+        
         while (tutorialKeys[0].color.a > 0)
         {
             foreach (var sr in tutorialKeys)
@@ -51,6 +53,14 @@ public class FadeInFadeOut : MonoBehaviour
             }
             yield return new WaitForSeconds(fadeDuration / 255);
         }
+        
+        transform.parent.parent.GetComponent<PlayerInteraction>().learningSomething = false;
+        
+        if (transform.parent.parent.GetComponent<PlayerInteraction>().canInteract)
+        {
+            transform.parent.parent.GetComponent<PlayerInteraction>().keyPressIcon.SetActive(true);
+        }
+        
         Destroy(gameObject);
     }
 }

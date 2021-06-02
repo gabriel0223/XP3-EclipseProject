@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3f099e2043121418f3d31344e8815d, type: 3}
+  m_Name: PipeTalk
+  m_EditorClassIdentifier: 
+  audioSentences:
+  - audioClip: {fileID: 8300000, guid: b71c8c983af98d44087fe3cb5eb554e2, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: ff5f2eafc57a25c49b1ab0fc454b4e1f, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: 597cf6cd4e12ca24d922dd54e1a319d4, type: 3}
+    timeToPlayNext: 0

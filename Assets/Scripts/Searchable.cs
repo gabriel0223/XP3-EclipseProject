@@ -108,7 +108,6 @@ public class Searchable : MonoBehaviour
             if (locked) return;
             
             isClose = true;
-            playerInteraction.keyPressIcon.SetActive(true);
         }
     }
     
@@ -117,7 +116,6 @@ public class Searchable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isClose = false;
-            playerInteraction.keyPressIcon.SetActive(false);
         }
     }
 }

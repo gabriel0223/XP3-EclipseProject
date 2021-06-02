@@ -13,6 +13,7 @@ TagManager:
   - ParticleSystem
   - Repairable
   - VentDoor
+  - Searchable
   layers:
   - Default
   - TransparentFX

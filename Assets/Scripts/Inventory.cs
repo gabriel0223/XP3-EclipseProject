@@ -70,9 +70,7 @@ public class Inventory : MonoBehaviour
                     slot.GetComponent<Slot>().itemIcon.texture = null;
                 }
             }
-            
         }
-        
     }
     
     public void CloseInventory(bool playSound)
@@ -86,8 +84,11 @@ public class Inventory : MonoBehaviour
         if (GameManager.instance.isSelectingItem)
         {
             selectItemText.SetActive(false);
-            if (!GetComponent<PlayerInteraction>().canInteract) return;
-            GetComponent<PlayerInteraction>().keyPressIcon.SetActive(true);
+            
+            if (GetComponent<PlayerInteraction>().canInteract)
+            {
+                GetComponent<PlayerInteraction>().keyPressIcon.SetActive(true);
+            }
         }
 
         GameManager.instance.blockPlayerMovement = false;

@@ -12,7 +12,7 @@ public class PlayerInteraction : MonoBehaviour
     [HideInInspector] public bool interacting;
     public ProgressBar repairBar;
     public GameObject objectBeingRepaired;
-    private bool learningSomething;
+    public bool learningSomething;
     private Interactive interactiveObject;
 
     public bool LearningSomething
@@ -38,11 +38,6 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (learningSomething)
-        {
-            keyPressIcon.SetActive(false);
-        }
-
         if (canInteract)
         {
             if (Input.GetKeyDown(KeyCode.F) && !GameManager.instance.blockPlayerMovement)
@@ -52,7 +47,7 @@ public class PlayerInteraction : MonoBehaviour
                 keyPressIcon.SetActive(false);
             }
 
-            if (!interacting)
+            if (!interacting && !learningSomething)
             {
                 keyPressIcon.SetActive(true);
             }
@@ -75,15 +70,14 @@ public class PlayerInteraction : MonoBehaviour
     
     public IEnumerator LearnSomething()
     {
-        learningSomething = true;
-        yield return new WaitForSeconds(5);
-        learningSomething = false;
+        yield return null;
+        // learningSomething = true;
+        // yield return new WaitForSeconds(6);
+        // learningSomething = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (learningSomething) return;
-        
         if (other.CompareTag("Interactive"))
         {
             canInteract = true;
@@ -96,6 +90,14 @@ public class PlayerInteraction : MonoBehaviour
             keyHoldIcon.SetActive(true);
             objectBeingRepaired = other.gameObject;
         }
+        else if (other.CompareTag("Searchable"))
+        {
+            canInteract = true;
+            interactiveObject = null;
+            keyPressIcon.SetActive(true);
+        }
+        
+        if (learningSomething) keyPressIcon.SetActive(false);
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -109,6 +111,11 @@ public class PlayerInteraction : MonoBehaviour
         {
             canRepair = false;
             keyHoldIcon.SetActive(false);
+        }
+        else if (other.CompareTag("Searchable"))
+        {
+            canInteract = false;
+            keyPressIcon.SetActive(false);
         }
     }
 }

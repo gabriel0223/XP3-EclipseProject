@@ -25,8 +25,10 @@ public class ConversationManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    IEnumerator PlayConversation()
+    IEnumerator PlayConversation(float delay)
     {
+        yield return new WaitForSeconds(delay);
+        
         for (int i = 0; i < currentConversation.audioSentences.Length; i++)
         {
             audioSource.clip = currentConversation.audioSentences[i].audioClip;
@@ -35,10 +37,10 @@ public class ConversationManager : MonoBehaviour
         }
     }
 
-    public void StartConversation(AudioConversation conversation)
+    public void StartConversation(AudioConversation conversation, float delay)
     {
         currentConversation = conversation;
-        StartCoroutine("PlayConversation");
+        StartCoroutine("PlayConversation", delay);
     }
     
     // Start is called before the first frame update

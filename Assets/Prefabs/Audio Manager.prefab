@@ -436,6 +436,27 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
     source: {fileID: 0}
+  - name: VentAbrir
+    clip: {fileID: 8300000, guid: ab53e6f3e5636f64cb3ce5bd816127f0, type: 3}
+    volume: 0.4
+    pitch: 1.4
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: VentFechar
+    clip: {fileID: 8300000, guid: e19a5da428bc8284ead096fd9012f3d0, type: 3}
+    volume: 0.4
+    pitch: 1.4
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
+  - name: ColetarPecas
+    clip: {fileID: 8300000, guid: 27e07e66d6025dc4b90780360d5667e3, type: 3}
+    volume: 0.4
+    pitch: 1.4
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: bc949fe2c73fe47409d196d44e712efa, type: 2}
+    source: {fileID: 0}
   source: {fileID: 0}
   masterMixer: {fileID: 24300002, guid: 0d7af997f30dcca46afea6d0a908544e, type: 2}
   musicMixer: {fileID: 24100000, guid: aeabe8a47130b534ba4ea89a619bce12, type: 2}

@@ -57,8 +57,14 @@ public class InventoryNavigation : MonoBehaviour
                 interactedObject.tag = "Untagged";
                 playerInteraction.canInteract = false;
                 
+                if (interactedObject.transform.parent.CompareTag("VentDoor"))
+                    playerInteraction.keyPressIcon.SetActive(false);
+
                 if (interactedObject.destroyInteractiveAfterUsage)
-                    Destroy(interactedObject.gameObject);
+                {
+                    Destroy(interactedObject.gameObject);  
+                }
+                    
                 
                 if (interactedObject.destroyItemAfterUsage)
                     GameManager.instance.RemoveRequestedItemFromInventory(interactedObject.requestedItem);

@@ -107,6 +107,11 @@ public class SearchSlot : MonoBehaviour, IDeselectHandler, ISelectHandler, ISubm
     {
         var itemToBeTaken = searchInventory.currentSearchable.items.Find(i => i.item == item);
 
+        if (item.itemType == InventoryItem.ItemType.Resource)
+        {
+            AudioManager.instance.Play("ColetarPecas");
+        }
+
         var timesToAdd = itemQuantity;
         for (int i = 0; i < timesToAdd; i++)
         {

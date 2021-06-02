@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3f099e2043121418f3d31344e8815d, type: 3}
+  m_Name: BedroomTalk
+  m_EditorClassIdentifier: 
+  audioSentences:
+  - audioClip: {fileID: 8300000, guid: ecfa5f14b3404974697d9bb5e4a73c3a, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: e6e4ce415d1bca14db479e098e323fd0, type: 3}
+    timeToPlayNext: 1
+  - audioClip: {fileID: 8300000, guid: 0f5b14fe53e48464c8b5f38c23276f2a, type: 3}
+    timeToPlayNext: 0
+  - audioClip: {fileID: 8300000, guid: a22301215274c724da026af0a0bf2416, type: 3}
+    timeToPlayNext: 0

@@ -6,6 +6,8 @@ using UnityEngine;
 public class PipeTutorial : MonoBehaviour
 {
     private Rigidbody2D rb2d;
+    public AudioConversation conversationToBeTriggered;
+    public float conversationDelay;
     public float impactForce;
     private bool hitHim;
 
@@ -34,6 +36,6 @@ public class PipeTutorial : MonoBehaviour
         hitHim = true;
         AudioManager.instance.Play("VisorRachadura02");
         GetComponentInChildren<TutorialTrigger>().ActivateTutorial();
-        //start conversation with Russel
+        ConversationManager.instance.StartConversation(conversationToBeTriggered, conversationDelay);
     }
 }

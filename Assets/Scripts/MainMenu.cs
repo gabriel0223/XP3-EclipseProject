@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public AudioMixerSnapshot noSong;
     public Transform selectionSquare;
     public GameObject[] menuSections;
+    public Animator fadePanel;
 
     public GameObject firstButton;
     // Start is called before the first frame update
@@ -44,6 +45,13 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("CHAMANDO O MÉTODO CERTO");
         noSong.TransitionTo(0.5f);
-        LevelManager.instance.StartGame();
+        fadePanel.SetTrigger("Fade");
+        Invoke("LoadGame", 1f);
+        //LevelManager.instance.StartGame();
+    }
+
+    private void LoadGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
