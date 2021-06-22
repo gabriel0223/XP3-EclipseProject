@@ -24,6 +24,7 @@ public class Searchable : MonoBehaviour
 
     [HideInInspector] public bool isClose;
     [HideInInspector] public PlayerInteraction playerInteraction;
+    private PropulsorZeroG propulsor;
     private Animator anim;
     public SearchableType searchableType;
     public SearchInventory searchInventory;
@@ -36,6 +37,7 @@ public class Searchable : MonoBehaviour
     private void Awake()
     {
         playerInteraction = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>();
+        propulsor = GameObject.FindGameObjectWithTag("Player").GetComponent<PropulsorZeroG>();
         searchableState = SearchableState.Closed;
         anim = GetComponent<Animator>();
         
@@ -64,6 +66,7 @@ public class Searchable : MonoBehaviour
 
     void Search()
     {
+        propulsor.Decelerate();
         searchInventory.currentSearchable = this;
         searchInventory.OpenInventory();
         playerInteraction.keyPressIcon.SetActive(false);

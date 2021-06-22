@@ -1483,6 +1483,7 @@
             </e>
           </e>
         </e>
+        <e p="GravityEngine.cs" t="Include" />
         <e p="Items" t="Include">
           <e p="ItemAbstract.cs" t="Include" />
           <e p="ItemAmmo.cs" t="Include" />
@@ -1926,6 +1927,7 @@
             <e p="Readme.txt" t="Include" />
           </e>
         </e>
+        <e p="Repairable.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AmbiencePlayer.cs" t="Include" />
           <e p="AmmoBox.cs" t="Include" />
@@ -1939,6 +1941,7 @@
           <e p="ConsumableItem.cs" t="Include" />
           <e p="ConversationManager.cs" t="Include" />
           <e p="ConversationTrigger.cs" t="Include" />
+          <e p="DebugStuff.cs" t="Include" />
           <e p="Dialogue.cs" t="Include" />
           <e p="DialoguePlayer.cs" t="Include" />
           <e p="Document.cs" t="Include" />
@@ -2010,12 +2013,12 @@
           <e p="TutorialTrigger.cs" t="Include" />
           <e p="UISetZ.cs" t="Include" />
           <e p="VentilationTrigger.cs" t="Include" />
-          <e p="ZDoor.cs" t="Include" />
           <e p="ZNavigation.cs" t="Include" />
         </e>
         <e p="Sound" t="Include">
           <e p="Lista_de_sons.txt" t="Include" />
         </e>
+        <e p="SoundTrigger.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />

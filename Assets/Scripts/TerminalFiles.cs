@@ -121,8 +121,6 @@ public class TerminalFiles : MonoBehaviour
     private void CloseTerminal()
     {
         AudioManager.instance.Stop(lastAudioPlayed);
-        AudioManager.instance.Play("TerminalFechar");
-        GameManager.instance.blockPlayerMovement = false;
-        Destroy(transform.parent.gameObject);
+        FindObjectOfType<Terminal>().CloseTerminal();
     }
 }

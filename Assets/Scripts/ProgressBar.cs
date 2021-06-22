@@ -9,6 +9,7 @@ public class ProgressBar : MonoBehaviour
     [HideInInspector] public Image barImage;
     public float fillSpeed;
     public float decreaseSpeed;
+    public Repairable currentRepairable;
 
     private void Awake()
     {
@@ -29,6 +30,8 @@ public class ProgressBar : MonoBehaviour
 
     public void FillBar()
     {
-        barImage.fillAmount += fillSpeed * Time.deltaTime;
+        currentRepairable.repairedPorcentage += currentRepairable.repairSpeed * Time.deltaTime;
+
+        barImage.fillAmount = currentRepairable.repairedPorcentage;
     }
 }

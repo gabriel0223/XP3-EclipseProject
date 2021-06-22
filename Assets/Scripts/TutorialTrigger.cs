@@ -47,7 +47,7 @@ public class TutorialTrigger : MonoBehaviour
 
     public void ActivateTutorial()
     {
-        FindObjectOfType<PlayerInteraction>().LearningSomething = true;
+        FindObjectOfType<PlayerInteraction>().learningSomething = true;
         tutorial.SetActive(true);
         GameManager.tutorialsLearnt.Add(tutorial.name);
         Destroy(gameObject);

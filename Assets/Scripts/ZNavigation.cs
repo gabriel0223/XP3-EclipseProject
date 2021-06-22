@@ -5,16 +5,37 @@ using UnityEngine;
 
 public class ZNavigation : MonoBehaviour
 {
+    [System.Serializable]
+    public class ZDoor
+    {
+        public string doorID;
+        public string nextScene;
+        public string nextDoorID;
+    }
+    
+    private PlayerInteraction playerInteraction;
     private Door door;
     private bool isClose;
     private GameObject keyPressIcon;
     public ZDoor zDoor;
+    
+    
+    
+    // public string doorID;
+    // public string nextScene;
+    // public string nextDoorID;
+
+    private void Awake()
+    {
+        door = GetComponent<Door>();
+        playerInteraction = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>();
+        keyPressIcon = playerInteraction.keyPressIcon;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        door = GetComponent<Door>();
-        keyPressIcon = GameObject.FindGameObjectWithTag("Player").transform.Find("KeyPressIcon").gameObject;
+        
     }
 
     // Update is called once per frame
@@ -34,7 +55,6 @@ public class ZNavigation : MonoBehaviour
         if (other.CompareTag("Player") && !door.locked)
         {
             isClose = true;
-            keyPressIcon.SetActive(true);
         }
     }
 
@@ -51,7 +71,6 @@ public class ZNavigation : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isClose = false;
-            keyPressIcon.SetActive(false);
         }
     }
 }

@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
 
     public void AddExaminableItem(InventoryItem item)
     {
+        Debug.Log("ADDING EXAMINABLE");
         for (int i = 0; i < inventory.slots.Length; i++)
         {
             if (inventory.isFull[i] == false)
@@ -94,7 +95,7 @@ public class GameManager : MonoBehaviour
                 inventory.slots[i].GetComponent<Slot>().item = item;
                 inventory.slots[i].transform.GetChild(0).gameObject.SetActive(true); //enable icon
                 inventory.isFull[i] = true;
-                itemsCollected.Add(item, item.name);
+                // itemsCollected.Add(item, item.name);
                 currentItems.Add(item);
                 break;
             }
@@ -103,12 +104,24 @@ public class GameManager : MonoBehaviour
 
     public void AddConsumableItem(InventoryItem item)
     {
+        Debug.Log("ADDING CONSUMABLE");
         for (int i = 0; i < inventory.slots.Length; i++)
         {
             if (inventory.isFull[i] == false) continue;
 
-            if (inventory.slots[i].GetComponent<Slot>().item == item)
+            if (inventory.slots[i].GetComponent<Slot>() != null)
             {
+                Debug.Log(item.name);
+                Debug.Log(inventory.slots[i].GetComponent<Slot>().item.name);
+            }
+            else
+            {
+                Debug.Log("SLOT NULO");
+            }
+            
+            if (inventory.slots[i].GetComponent<Slot>().item.name.Equals(item.name))
+            {
+                Debug.Log("ACHEI UM ITEM IGUAL");
                 inventory.slots[i].GetComponent<Slot>().itemQuantity++;
                 return;
             }
@@ -119,6 +132,7 @@ public class GameManager : MonoBehaviour
         {
             if (inventory.isFull[i] == false)
             {
+                Debug.Log("TENTANDO ADICIONAR PELA PRIMEIRA VEZ");
                 inventory.slots[i].GetComponent<Slot>().item = item;
                 inventory.slots[i].GetComponent<Slot>().itemQuantity = 1;
                 inventory.slots[i].transform.GetChild(0).gameObject.SetActive(true); //enable icon
@@ -172,11 +186,6 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
-    }
-
-    public void AddAmmo(Gun gun, int ammoQuantity)
-    {
-        
     }
 
     public void ReloadInventory(Slot[] slots)

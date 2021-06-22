@@ -10,9 +10,10 @@ public class PropulsorZeroG : MonoBehaviour
     public float jetpackForce;
     public float rotationForce;
     public float dashForce;
-    private Rigidbody2D rb2d;
+    [HideInInspector] public Rigidbody2D rb2d;
     private PlayerInteraction playerInteraction;
     public float deceleration;
+    [HideInInspector] public bool decelerating;
     private AudioManager audioManager;
     private bool canPlaySound = true;
 
@@ -100,6 +101,26 @@ public class PropulsorZeroG : MonoBehaviour
         }
         
         //Debug.Log(rb2d.velocity.magnitude);
+    }
+
+    public void Decelerate()
+    {
+        if (decelerating) return;
+        StartCoroutine(DecelerateCoroutine());
+    }
+    
+    IEnumerator DecelerateCoroutine()
+    {
+        decelerating = true;
+        
+        while (rb2d.velocity.magnitude > 0.1f)
+        {
+            rb2d.velocity -= rb2d.velocity * 0.05f;
+            Debug.Log(rb2d.velocity);
+            yield return null;
+        }
+
+        decelerating = false;
     }
 
     private void PropellantParticles()

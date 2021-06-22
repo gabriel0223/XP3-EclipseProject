@@ -18,6 +18,7 @@ public class Door : MonoBehaviour
     public DoorState doorState;
     [HideInInspector] public string id; 
     public bool locked;
+    public bool broken;
     public SpriteRenderer doorSr;
     private Animator anim;
 

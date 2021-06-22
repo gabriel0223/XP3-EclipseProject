@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        UpdateInventory();
     }
 
     // Update is called once per frame
@@ -97,5 +97,16 @@ public class Inventory : MonoBehaviour
         if (playSound) AudioManager.instance.Play("CloseInventory");
         weaponUI.SetActive(true);
         inventory.SetActive(false);
+    }
+
+    private void UpdateInventory()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].GetComponent<Slot>().item != null)
+            {
+                isFull[i] = true;
+            }
+        }
     }
 }

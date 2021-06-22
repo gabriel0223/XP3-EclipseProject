@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using System.Linq;
 using System;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class AudioManager : MonoBehaviour
@@ -44,17 +45,16 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
-
-            if (s.mixerGroup.audioMixer.name.Equals("Music"))
-            {
-                s.source.ignoreListenerPause = true;
-            }
+            s.source.ignoreListenerPause = s.ignoreListenerPause;
         }   
     }
 
     private void Start()
     {
-        PlaySong("MenuSong");
+        if (SceneManager.GetActiveScene().name.Equals("MenuSong"))
+        {
+            PlaySong("MenuSong");  
+        }
     }
 
     // Update is called once per frame

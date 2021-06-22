@@ -46,7 +46,7 @@ public class TerminalTabs : MonoBehaviour
     public void MoveTabFeedback()
     {
         Vector3 tabPos = new Vector3(selectedTab.GetComponent<RectTransform>().position.x, selectedTab.GetComponent<RectTransform>().position.y, 1);
-        feedbackRect.position = Vector2.Lerp(feedbackRect.position, tabPos, moveTabSpeed * Time.deltaTime);
+        feedbackRect.position = Vector2.Lerp(feedbackRect.position, tabPos, moveTabSpeed * Time.unscaledDeltaTime);
         feedbackRect.localPosition = new Vector3(feedbackRect.localPosition.x,feedbackRect.localPosition.y, 0);
     }
 }

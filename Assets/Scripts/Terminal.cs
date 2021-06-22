@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,11 +15,15 @@ public class Terminal : MonoBehaviour
     public GameObject terminalToBeInstantiated;
     private GameObject terminalGameObject;
     private GameObject canvas;
-        
+
+    private void Awake()
+    {
+        playerInteraction = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        playerInteraction = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>();
         canvas = GameObject.Find("Canvas");
     }
 
@@ -39,6 +44,7 @@ public class Terminal : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isClose = true;
+            playerInteraction.canInteract = true;
             playerInteraction.keyPressIcon.SetActive(true);
         }
     }
@@ -48,6 +54,7 @@ public class Terminal : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isClose = false;
+            playerInteraction.canInteract = false;
             playerInteraction.keyPressIcon.SetActive(false);
         }
     }
@@ -56,7 +63,18 @@ public class Terminal : MonoBehaviour
     {
         terminalGameObject = Instantiate(terminalToBeInstantiated, canvas.transform);
         terminalGameObject.SetActive(true);
+        Time.timeScale = 0;
+        AudioListener.pause = true;
         GameManager.instance.blockPlayerMovement = true;
         AudioManager.instance.Play("TerminalAbrir");
+    }
+    
+    public void CloseTerminal()
+    {
+        Time.timeScale = 1;
+        AudioListener.pause = false;
+        AudioManager.instance.Play("TerminalFechar");
+        GameManager.instance.blockPlayerMovement = false;
+        Destroy(terminalGameObject);
     }
 }

@@ -11,9 +11,10 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject keyHoldIcon;
     [HideInInspector] public bool interacting;
     public ProgressBar repairBar;
-    public GameObject objectBeingRepaired;
+    public Repairable currentRepairable;
     public bool learningSomething;
     private Interactive interactiveObject;
+    private PropulsorZeroG propulsor;
 
     public bool LearningSomething
     {
@@ -27,6 +28,11 @@ public class PlayerInteraction : MonoBehaviour
                 StartCoroutine(LearnSomething());
             }
         }
+    }
+
+    private void Awake()
+    {
+        propulsor = GetComponent<PropulsorZeroG>();
     }
 
     // Start is called before the first frame update
@@ -43,7 +49,8 @@ public class PlayerInteraction : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F) && !GameManager.instance.blockPlayerMovement)
             {
                 interacting = true;
-                interactiveObject.Interact();
+                if (interactiveObject != null) interactiveObject.Interact();
+                propulsor.Decelerate();
                 keyPressIcon.SetActive(false);
             }
 
@@ -53,16 +60,22 @@ public class PlayerInteraction : MonoBehaviour
             }
         }
 
-        if (canRepair)
+        if (canRepair && !currentRepairable.repaired)
         {
             if (Input.GetKey(KeyCode.F))
             {
+                GameManager.instance.blockPlayerMovement = true;
+                propulsor.Decelerate();
                 repairBar.FillBar();
             }
-            
-            if (repairBar.barImage.fillAmount >= 1)
+            else
             {
-                objectBeingRepaired.tag = "Untagged";
+                GameManager.instance.blockPlayerMovement = false;
+            }
+            
+            if (currentRepairable.repairedPorcentage >= 1)
+            {
+                currentRepairable.CompleteRepair();
                 keyHoldIcon.SetActive(false);
             }
         }
@@ -88,12 +101,20 @@ public class PlayerInteraction : MonoBehaviour
         {
             canRepair = true;
             keyHoldIcon.SetActive(true);
-            objectBeingRepaired = other.gameObject;
+            currentRepairable = other.GetComponent<Repairable>();
+            repairBar.currentRepairable = currentRepairable;
         }
         else if (other.CompareTag("Searchable"))
         {
             canInteract = true;
             interactiveObject = null;
+            keyPressIcon.SetActive(true);
+        }
+        else if (other.CompareTag("ZDoor"))
+        {
+            if (other.GetComponent<Door>().locked) return;
+            
+            canInteract = true;
             keyPressIcon.SetActive(true);
         }
         
@@ -114,6 +135,13 @@ public class PlayerInteraction : MonoBehaviour
         }
         else if (other.CompareTag("Searchable"))
         {
+            canInteract = false;
+            keyPressIcon.SetActive(false);
+        }
+        else if (other.CompareTag("ZDoor"))
+        {
+            if (other.GetComponent<Door>().locked) return;
+            
             canInteract = false;
             keyPressIcon.SetActive(false);
         }

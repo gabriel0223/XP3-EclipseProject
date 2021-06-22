@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4325574277853123962}
   - component: {fileID: 4325574277853123961}
+  - component: {fileID: 3502870484638541273}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -41,5 +42,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 577b5018f0dc55649abac1887fea9d13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunScript: {fileID: 0}
+  inventory: []
+--- !u!114 &3502870484638541273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4325574277853123963}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb5860c8ce6b7bc419edac9ff254e624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
