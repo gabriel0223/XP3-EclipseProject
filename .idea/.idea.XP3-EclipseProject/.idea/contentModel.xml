@@ -281,6 +281,7 @@
             <e p="RelevantGraphSurface.cs" t="Include" />
             <e p="TileHandlerHelper.cs" t="Include" />
           </e>
+          <e p="package.json" t="Include" />
           <e p="PackageTools" t="Include">
             <e p="Editor" t="Include">
               <e p="EditorBase.cs" t="Include" />
@@ -1512,6 +1513,7 @@
               <e p="NavMeshSurface2d.cs" t="Include" />
             </e>
           </e>
+          <e p="package.json" t="Include" />
         </e>
         <e p="Plugins" t="Include">
           <e p="Easy Save 3" t="Include">
@@ -2048,6 +2050,7 @@
           </e>
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
+            <e p="EmojiOne.json" t="Include" />
           </e>
         </e>
       </e>

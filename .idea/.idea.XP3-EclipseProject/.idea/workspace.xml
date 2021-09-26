@@ -21,41 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="9b1a2590-f641-4fbd-ac70-cf6b65f5d7c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XP3-EclipseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Doors/Door.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Interactable/Doors/Door.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Props/Interactable/gravityGenerator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Props/Interactable/gravityGenerator.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Audio Manager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Audio Manager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Katia Hopkins's Terminal.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Katia Hopkins's Terminal.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bedroom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bedroom.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Corridor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Corridor.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Door.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProgressBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ProgressBar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PropulsorZeroG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PropulsorZeroG.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Searchable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Searchable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Terminal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Terminal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TerminalFiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TerminalFiles.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TerminalTabs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TerminalTabs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TubulationSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TubulationSound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TutorialTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TutorialTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZDoor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZDoor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZNavigation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZNavigation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Mixers/Dialogue.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/Mixers/Dialogue.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Undefined/2D Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Undefined/2D Renderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Undefined/PipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Undefined/PipelineAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,6 +179,7 @@
       <workItem from="1623780062746" duration="16885000" />
       <workItem from="1624066095664" duration="8227000" />
       <workItem from="1624219807908" duration="33375000" />
+      <workItem from="1624845070278" duration="595000" />
     </task>
     <servers />
   </component>
